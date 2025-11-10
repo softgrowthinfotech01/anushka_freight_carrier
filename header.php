@@ -30,16 +30,17 @@
       <h2 class="me-5 mb-0 text-white"><a href="dashboard.php">Dashboard</a></h2>
 
       <!-- Main Menu -->
-      <ul class="navbar-nav me-auto ms-5 gap-5">
-        <li class="nav-item dropdown">
+      <ul class="navbar-nav me-auto ms-5 gap-3">
+        <li class="nav-item dropdown gap-3">
           <div class="btn-group">
-            <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              MASTER FORMS
+            <button class="btn btn-dark btn-lg " type="button"  aria-expanded="false">
+              <a href="consignor.php" class="text-decoration-none text-white">Consignor Information</a>        
             </button>
-            <ul class="dropdown-menu bg-dark">
-              <li><button type="button" class="btn btn-link bg-dark text-white text-decoration-none"><a href="consignor.php" class="text-decoration-none text-white">Consignor Information</a></button></li>
-              <li><button type="button" class="btn btn-link bg-dark text-white text-decoration-none"><a href="consignee.php" class="text-decoration-none text-white">Consignee Information</a></button></li>
-            </ul>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-dark btn-lg " type="button"  aria-expanded="false">
+              <a href="consignee.php" class="text-decoration-none text-white">Consignee Information</a>        
+            </button>
           </div>
         </li>
         <li class="nav-item dropdown gap-3">

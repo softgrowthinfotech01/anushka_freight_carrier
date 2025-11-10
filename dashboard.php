@@ -276,6 +276,7 @@
                             <option value="5">Desai Movers</option>
                           </select>
                         </div>
+                      </div>
                         <div class="col-md-6 ">
                           <div class="form-group">
                             <label for="vehicle">CONSIGNEE PHONE</label>
@@ -286,7 +287,7 @@
                               placeholder="Enter Phone Number">
                           </div>
                         </div>
-                      </div>
+                    </div>
 
                       <div class="row mb-2">
                         <div class="col-md-6 ">
