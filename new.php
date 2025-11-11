@@ -224,8 +224,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark position-relative bg-dark">
-      <div class="container mt-2">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark  bg-dark">
+      <div class="container position-relative mt-2">
         <a class="navbar-brand position-absolute" href="#">
           <img
             src="logo-AC.png"
