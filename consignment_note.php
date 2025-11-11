@@ -384,7 +384,7 @@
         <div class="row">
           <div class="col">
             <div>
-              <label>Select Consignee</label>
+              <label>Select Consignor</label>
               <select class="form-select field" id="consignorDropdown">
                 <option value="">-- Select Consignor --</option>
                 <option value="1">Arjun Sharma Transport</option>

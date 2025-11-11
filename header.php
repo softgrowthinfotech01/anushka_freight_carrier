@@ -33,28 +33,69 @@
       <ul class="navbar-nav me-auto ms-5 gap-3">
         <li class="nav-item dropdown gap-3">
           <div class="btn-group">
-            <button class="btn btn-dark btn-lg " type="button"  aria-expanded="false">
-              <a href="consignor.php" class="text-decoration-none text-white">Consignor Information</a>        
+            <button
+              class="btn btn-dark btn-lg dropdown-toggle fw-bold text-white"
+              type="button"
+              id="operationsDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Operations
             </button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-dark btn-lg " type="button"  aria-expanded="false">
-              <a href="consignee.php" class="text-decoration-none text-white">Consignee Information</a>        
-            </button>
+            <ul class="dropdown-menu bg-dark dropdown-menu-end" aria-labelledby="operationsDropdown">
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item bg-dark text-white" href="dashboard.php">CN Entry</a></li>
+            </ul>
           </div>
         </li>
+        <div class="btn-group">
+          <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
+            <a href="consignor.php" class="text-decoration-none text-white">Consignor Information</a>
+          </button>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
+            <a href="consignee.php" class="text-decoration-none text-white">Consignee Information</a>
+          </button>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
+            <a href="lorry.php" class="text-decoration-none text-white">Lorry Information</a>
+          </button>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
+            <a href="freight_bill.php" class="text-decoration-none text-white">Freight Bill</a>
+          </button>
+        </div>
+        </li>
+
         <li class="nav-item dropdown gap-3">
           <div class="btn-group">
-            <button class="btn btn-dark btn-lg " type="button"  aria-expanded="false">
-              <a href="consignor_record.php" class="text-decoration-none text-white">Consignor Record</a>        
+            <button
+              class="btn btn-dark btn-lg dropdown-toggle fw-bold text-white"
+              type="button"
+              id="operationsDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Records
             </button>
-          </div>
-          <div class="btn-group">
-            <button class="btn btn-dark btn-lg " type="button"  aria-expanded="false">
-              <a href="consignee_record.php" class="text-decoration-none text-white">Consignee Record</a>        
-            </button>
+            <ul class="dropdown-menu bg-dark dropdown-menu-end " aria-labelledby="operationsDropdown">
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              
+              <li><a class="dropdown-item bg-dark text-white" href="#">CN Entry Records</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="consignor_record.php">Consignor Records</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="consignee_record.php">Consignee Records</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="#">Lorry Records</a></li>
+              
+            </ul>
           </div>
         </li>
+
+
       </ul>
 
       <!-- Right side user section -->
@@ -67,10 +108,9 @@
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false">
-            <span class="fw-bold text-white">Hi, ...</span>
+            <span class="fw-bold text-white">Hi, AFC</span>
           </a>
           <ul class="dropdown-menu dropdown-menu-end bg-dark" aria-labelledby="userDropdown">
-            <li><a class="dropdown-item bg-dark text-white" href="#">Account Setting</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -82,4 +122,3 @@
   </nav>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-

@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> Admin Dashboard</title>
+  <title> Consignor</title>
   <meta
     content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     name="viewport" />
@@ -64,46 +64,9 @@
 
       <div class="container">
         <div class="page-inner">
-          <div class="row">
+          
 
-          <div class="col-sm-9 col-md-4">
-              <div class="card card-stats card-round">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-info bubble-shadow-small">
-                        <i class="fas fa-user-check"></i>
-                      </div>
-                    </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <button class="btn btn-transparent"><a href="consignor.php" class="text-decoration-none text-dark">Consignor Information</a></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-9 col-md-4">
-              <div class="card card-stats card-round">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-success bubble-shadow-small">
-                        <i class="fas fa-luggage-cart"></i>
-                      </div>
-                    </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <button class="btn btn-transparent"><a href="consignee.php" class="text-decoration-none text-dark">Consignee Information</a></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          
 
           <div class="row">
             <div class="col-md-12">

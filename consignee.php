@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> Admin Dashboard</title>
+  <title>Consignee</title>
   <meta
     content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     name="viewport" />
@@ -64,47 +64,9 @@
 
       <div class="container">
         <div class="page-inner">
-          <div class="row">
 
-          <div class="col-sm-9 col-md-4">
-              <div class="card card-stats card-round">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-info bubble-shadow-small">
-                        <i class="fas fa-user-check"></i>
-                      </div>
-                    </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <button class="btn btn-transparent"><a href="consignor.php" class="text-decoration-none text-dark">Consignor Information</a></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-9 col-md-4">
-              <div class="card card-stats card-round">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-success bubble-shadow-small">
-                        <i class="fas fa-luggage-cart"></i>
-                      </div>
-                    </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <button class="btn btn-transparent"><a href="consignee.php" class="text-decoration-none text-dark">Consignee Information</a></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
+
+
           <div class="row">
             <div class="col-md-12">
               <div class="card">
@@ -113,7 +75,7 @@
                 </div>
                 <div class="card-body">
                   <form>
-                   <div class="row mb-2">
+                    <div class="row mb-2">
                       <div class="col-md-6 ">
                         <div class="form-group">
                           <label for="vehicle">CONSIGNEE NAME</label>
@@ -181,71 +143,66 @@
                         </div>
                       </div>
                     </div>
-                    
+
 
                     <div class="row">
                       <div class="col-12 d-flex justify-content-center ">
                         <button type="submit" class=" button2">SUBMIT</button>
                       </div>
-                    </div> 
-                
-                </form>
+                    </div>
+
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>      
+        </div>
       </div>
-      </div><?php include "footer.php" ?>
 
-      
-    </div>
-    <!--   Core JS Files   -->
-    <script src="assets/js/core/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/core/popper.min.js"></script>
-    <script src="assets/js/core/bootstrap.min.js"></script>
 
-    <!-- jQuery Scrollbar -->
-    <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    </div><?php include "footer.php" ?>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap.min.js"></script>
 
-    <!-- Chart JS -->
-    <script src="assets/js/plugin/chart.js/chart.min.js"></script>
+  <!-- jQuery Scrollbar -->
+  <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
-    <!-- jQuery Sparkline -->
-    <script src="assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+  <!-- Chart JS -->
+  <script src="assets/js/plugin/chart.js/chart.min.js"></script>
 
-    <!-- Chart Circle -->
-    <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+  <!-- jQuery Sparkline -->
+  <script src="assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
-    <!-- Datatables -->
-    <script src="assets/js/plugin/datatables/datatables.min.js"></script>
+  <!-- Chart Circle -->
+  <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
 
-    <!-- Bootstrap Notify -->
-    <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+  <!-- Datatables -->
+  <script src="assets/js/plugin/datatables/datatables.min.js"></script>
 
-    <!-- jQuery Vector Maps -->
-    <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
-    <script src="assets/js/plugin/jsvectormap/world.js"></script>
+  <!-- Bootstrap Notify -->
+  <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-    <!-- Google Maps Plugin -->
-    <script src="assets/js/plugin/gmaps/gmaps.js"></script>
+  <!-- jQuery Vector Maps -->
+  <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+  <script src="assets/js/plugin/jsvectormap/world.js"></script>
 
-    <!-- Sweet Alert -->
-    <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+  <!-- Google Maps Plugin -->
+  <script src="assets/js/plugin/gmaps/gmaps.js"></script>
 
-    <!-- Kaiadmin JS -->
-    <script src="assets/js/kaiadmin.min.js"></script>
+  <!-- Sweet Alert -->
+  <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
-    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-    <script src="assets/js/setting-demo2.js"></script>
+  <!-- Kaiadmin JS -->
+  <script src="assets/js/kaiadmin.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+  <script src="assets/js/setting-demo2.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
 </html>
-
-
-
-
-
-

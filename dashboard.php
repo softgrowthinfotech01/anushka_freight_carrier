@@ -104,6 +104,365 @@
       background-color: #008CBA;
       color: white;
     }
+
+    /* form code */
+
+    :root {
+      --paper: #fff7f8;
+      --line: #c99;
+      --deep: #8b3a3a;
+      --muted: #8a6f6f;
+      --border: #bda3a3;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: #f0ecec;
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
+
+    .sheet {
+      width: 100%;
+      /* change to fit screen / print */
+      margin: 22px auto;
+      background: linear-gradient(180deg, var(--paper), #fff 50%);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-radius: 8px;
+      padding: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      color: #333;
+    }
+
+    /* faint vertical crease and fold */
+    .sheet:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.00));
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    header {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      border-bottom: 3px solid var(--line);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .logo {
+      width: 150px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--deep);
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
+
+    .head-text {
+      flex: 1;
+    }
+
+    .company {
+      font-size: 28px;
+      color: var(--deep);
+      font-weight: 800;
+      margin: 0 0 4px 0;
+      letter-spacing: 1px;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .right-head {
+      width: 320px;
+      text-align: right;
+      font-size: 12px;
+    }
+
+    .non-neg {
+      font-weight: 700;
+      color: var(--deep);
+      margin-bottom: 4px;
+    }
+
+    .cons-no {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 10px;
+      border: 2px dashed var(--border);
+      color: #a12b2b;
+      font-weight: 800;
+      letter-spacing: 1px;
+      background: #fff0f1;
+    }
+
+    /* watermark */
+    .watermark {
+      position: absolute;
+      left: 40%;
+      top: 36%;
+      transform: translate(-40%, -36%);
+      font-size: 180px;
+      color: rgba(189, 142, 142, 0.05);
+      font-weight: 800;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    /* left form */
+    .form-left {
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      padding: 10px;
+      background: transparent;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+      margin-bottom: 8px;
+    }
+
+    .col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .field {
+      border: 1px solid var(--border);
+      min-height: 36px;
+      padding: 8px;
+      background: linear-gradient(180deg, #fff, #fffafc);
+      border-radius: 3px;
+      font-size: 10px;
+    }
+
+    .field-distance {
+      border: 1px solid var(--border);
+      padding: 8px;
+      background: linear-gradient(180deg, #fff, #fffafc);
+      border-radius: 3px;
+      font-size: 13px;
+    }
+
+    /* a grid of many small fields and boxes */
+    .table-like {
+      border-top: 2px solid var(--line);
+      margin-top: 6px;
+      padding-top: 8px;
+    }
+
+    .small-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .small-grid .cell {
+      border: 1px solid var(--border);
+      min-height: 42px;
+      padding: 8px;
+      font-size: 12px;
+      background: white;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--deep);
+      margin: 8px 0 6px;
+    }
+
+    .dim-table {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+    }
+
+    .dim-table .box {
+      border: 1px solid var(--border);
+      min-height: 36px;
+      padding: 6px;
+      background: white;
+      font-size: 12px;
+    }
+
+    /* right charges column */
+    .charges {
+      border: 2px solid var(--line);
+      padding: 10px;
+      background: linear-gradient(180deg, #fff, #fff8f8);
+      min-height: 720px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .charges .top {
+      font-size: 12px;
+    }
+
+    .charges .bank {
+      border: 1px dashed var(--border);
+      padding: 8px;
+      margin-bottom: 10px;
+      background: #fff;
+      font-size: 12px;
+    }
+
+    .charges .list {
+      border-top: 2px solid var(--line);
+      margin-top: 8px;
+    }
+
+    .charge-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 6px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.04);
+      font-size: 13px;
+    }
+
+    .charge-row:last-child {
+      border-bottom: none;
+    }
+
+    .charges .total {
+      margin-top: 8px;
+    }
+
+    .big-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      font-weight: 800;
+      font-size: 16px;
+      border-top: 2px solid var(--line);
+      background: linear-gradient(180deg, transparent, #fff6f6);
+    }
+
+    /* small notes footer */
+    .footer1 {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Print friendly */
+    @media print {
+      body {
+        background: white
+      }
+
+      .sheet {
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        margin: 0;
+        padding: 6mm
+      }
+    }
+
+    /* helpers */
+    .muted {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .tiny {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* highlight/placeholder style for removed scratched area */
+    .clean-placeholder {
+      background: linear-gradient(90deg, #fff, #fff);
+      border: 1px dashed rgba(200, 120, 120, 0.12);
+      color: rgba(0, 0, 0, 0.45);
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    .button {
+      background-color: #21a6e4;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: #21e499ff;
+      border: none;
+      border-radius: 5px;
+      color: black;
+      padding: 13px 13px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 13px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .table th,
+    .table td {
+      border: 1px solid #aaa;
+      padding: 4px;
+      text-align: center;
+    }
+
+    .table th {
+      background: #f9f3f3;
+      color: #a22;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -116,873 +475,540 @@
       ?>
       <div class="container">
         <div class="page-inner">
-          <div class="row">
-
-            <div class="col-sm-9 col-md-4">
-              <div class="card card-stats card-round">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-info bubble-shadow-small">
-                        <i class="fas fa-user-check"></i>
-                      </div>
-                    </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <button class="btn btn-transparent"><a href="consignor.php" class="text-decoration-none text-dark">Consignor Information</a></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-9 col-md-4">
-              <div class="card card-stats card-round">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div
-                        class="icon-big text-center icon-success bubble-shadow-small">
-                        <i class="fas fa-luggage-cart"></i>
-                      </div>
-                    </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <button class="btn btn-transparent"><a href="consignee.php" class="text-decoration-none text-dark">Consignee Information</a></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><br>
+          
 
           <div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <div class="card-title text-center">BILL</div>
-                </div>
-                <div class="card-header">
-                  <div class="card-title">CONSIGNOR INFORMATION</div>
+                  <div class="card-title text-center"></div>
                 </div>
                 <div class="card-body">
-                  <form>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">CONSIGNOR NAME</label>
-                          <select class="form-select p-2" id="consignorDropdown">
-                            <option value="">-- Select Consignor --</option>
-                            <option value="1">Arjun Sharma Transport</option>
-                            <option value="2">Patel Logistics Pvt Ltd</option>
-                            <option value="3">Singh Freight Services</option>
-                            <option value="4">Kumar Cargo Solutions</option>
-                            <option value="5">Desai Movers</option>
-                          </select>
+                  <div class="sheet" role="document" aria-label="Consignment note">
+                    <div class="watermark">AFC</div>
+
+                    <header>
+                      <div class="logo" aria-hidden="true">
+                        <!-- simple emblem placeholder -->
+                        <div>
+                          <img src="logo-AC.png" alt="logoAC" class="img-fluid">
                         </div>
                       </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">CONSIGNOR PHONE</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Phone Number">
+
+                      <div class="head-text">
+                        <h1 class="company">ANUSHKA FRIEGHT CARRIERS</h1>
+                        <p class="sub">Regd Office : Mahaveer Potteries Compound Nagpur Road, PO. Padoli CHANDRAPUR - 442406 &nbsp;
+                          &nbsp;</p>
+                        <p class="tiny">INSURANCE: The customer has stated that he has insured / not insured the consignment</p>
+                      </div>
+
+                      <div class="right-head">
+                        <div class="non-neg">NON-NEGOTIABLE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          CONSIGNMENT NOTE NO.</div>
+                        <!-- <div class="muted">PAN No. ALGPV0809D</div> -->
+                        <div style="margin-top:10px">
+                          <div class="cons-no" aria-label="Consignment number"><div class=""><input type="text" class="border-0 bg-transparent" placeholder=""></div></div>
                         </div>
+                      </div>
+                    </header>
+
+                    <div class="content">
+                      <!-- LEFT -->
+                      <div class="form-left" role="form">
+                        <!-- row 1: Company / Policy -->
+                        <div class="row p-2">
+                          <div class="col section-title">
+                            General Information
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <label>Booking Branch</label>
+                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                          </div>
+                          <div class="col">
+                            <label>&nbsp;</label>
+                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                            <!-- Autofill pincode and city -->
+                          </div>
+
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <label>CN No. & Date</label>
+                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                          </div>
+                          <div class="col">
+                            <label>Delivery Type</label>
+                             <select class="form-select field" id="consignorDropdown">
+                                    <option value="">-- Select --</option>
+                                  </select> <!-- dropdown -->
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <label>Destination Branch</label>
+                             <select class="form-select field" id="consignorDropdown">
+                                    <option value="">-- Select  --</option>
+                                  </select> <!-- dropdown -->
+                          </div>
+                          <div class="col">
+                            <label>&nbsp;</label>
+                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                            <!-- Autofill dest. drop location and pincode -->
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <label>Exceptional Booking?</label>
+                             <select class="form-select field" id="consignorDropdown">
+                                    <option value="">-- Select  --</option>
+                                  </select> <!-- dropdown -->
+                          </div>
+                          <div class="col">
+                            <label>Distance in Kms</label>
+                            <div class="field"><input type="text" class="border-0" placeholder=""></div> <!-- autofill -->
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <label>Dest. loc. Landmark</label>
+                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                          </div>
+                        </div>
+
+                        <!-- consignor / consignee -->
+                        <div class="row p-2">
+                          <div class="col section-title">
+                            Consignor and Consignee Information
+                          </div>
+                        </div>
+                        <div class="con d-flex">
+                          <div class="col-6 p-3 border">
+                            <div class="col">
+                              <div>
+                                <label>Select Consignor</label>
+                                <select class="form-select field" id="consignorDropdown">
+                                  <option value="">-- Select Consignor --</option>
+                                  <option value="1">Arjun Sharma Transport</option>
+                                  <option value="2">Patel Logistics Pvt Ltd</option>
+                                  <option value="3">Singh Freight Services</option>
+                                  <option value="4">Kumar Cargo Solutions</option>
+                                  <option value="5">Desai Movers</option>
+                                </select>
+                              </div>
+                            </div>
+
+
+                            <div class="col">
+                              <label>Consignor's Name</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Name"></div>
+                            </div>
+                            <div class="col">
+                              <label>Consignor's Address</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Address"></div>
+                            </div>
+                            <div class="col">
+                              <label>Consignor's Phone</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Phone"></div>
+                            </div>
+                            <div class="col">
+                              <label>Consignor's Email</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Email"></div>
+                            </div>
+                            <div class="col">
+                              <label>Legal Name</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Legal"></div>
+                            </div>
+                            <div class="col">
+                              <label>Trade Name</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Trade"></div>
+                            </div>
+                            <div class="col">
+                              <label>From CODE &amp; Name</label>
+                              <div class="field">[Code / Location]</div>
+                            </div>
+                          </div>
+
+                          <div class="col-6 p-3 border">
+                            <div class="col">
+                              <div>
+                                <label>Select Consignee</label>
+                                <select class="form-select field" id="consignorDropdown">
+                                  <option value="">-- Select Consignee --</option>
+                                  <option value="1">Arjun Sharma Transport</option>
+                                  <option value="2">Patel Logistics Pvt Ltd</option>
+                                  <option value="3">Singh Freight Services</option>
+                                  <option value="4">Kumar Cargo Solutions</option>
+                                  <option value="5">Desai Movers</option>
+                                </select>
+                              </div>
+                            </div>
+
+
+                            <div class="col">
+                              <label>Consignee's Name</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Name"></div>
+                            </div>
+                            <div class="col">
+                              <label>Consignee's Address</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Address"></div>
+                            </div>
+                            <div class="col">
+                              <label>Consignee's Phone</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Phone"></div>
+                            </div>
+                            <div class="col">
+                              <label>Consignee's Email</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Email"></div>
+                            </div>
+                            <div class="col">
+                              <label>Legal Name</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Legal"></div>
+                            </div>
+                            <div class="col">
+                              <label>Trade Name</label>
+                              <div class="field"><input type="text" class="border-0" placeholder="Trade"></div>
+                            </div>
+                            <div class="col">
+                              <label>From CODE &amp; Name</label>
+                              <div class="field">[Code / Location]</div>
+                            </div>
+                          </div>
+                        </div><br>
+
+                        <!-- Billing Details -->
+                        <div class="table-like">
+                          <div class="row p-2">
+                            <div class="col section-title">
+                              Billing Details
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Booking Basis</label>
+                                 <select class="form-select field" id="consignorDropdown">
+                                    <option value="">-- Select  --</option>
+                                  </select>  <!-- Dropdown -->
+                              </div>
+                              <div class="col">
+                                <label>Bill for & station</label>
+                                 <select class="form-select field" id="consignorDropdown">
+                                    <option value="">-- Select  --</option>
+                                  </select>  <!-- Dropdown -->
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Billing Party</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                              <div class="col">
+                                <label>Party Code and Unit</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Billing Party GST</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                              <div class="col">
+                                <label>Legal Name</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Address</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                              <div class="col">
+                                <label>Trade Name</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Sector & DCC Days</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                              <div class="col">
+                                <label>CNCC Type</label>
+                                 <select class="form-select field" id="consignorDropdown">
+                                    <option value="">-- Select  --</option>
+                                  </select> <!-- Dropdown -->
+                              </div>
+                            </div>
+
+                          </div>
+
+
+                          <!-- Package Details -->
+
+                          <div class="table-like">
+                            <div class="row p-2">
+                              <div class="col section-title">
+                                Package Details
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col d-flex justify-content-center align-items-center gap-3">
+                                <input type="checkbox">
+                                <label class="fs-5 m-0">LOOSE (Zero Package)</label>
+                              </div>
+                              <div class="col">
+                                <label>Package</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Package Method</label>
+                                <div>
+                                  <select class="form-select field" id="consignorDropdown">
+                                    <option value="">-- Select Method --</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col d-flex justify-content-center align-items-center gap-4">
+                                <div style="flex:1">
+                                  <label for="" class="ms-2">Qty.:</label>
+                                </div>
+                                <div style="flex:1">
+                                  <div class="field">
+                                    <input type="text" class="border-transparent">
+                                  </div>
+                                </div>
+                                <div style="flex:1">
+                                  <button class="button1">Add More</button> <!-- Adds more rows to the table below -->
+                                </div>
+                              </div>
+                              <table class="table">
+                                <tr>
+                                  <th>SR No.</th>
+                                  <th>Package Method</th>
+                                  <th>Quantity</th>
+                                  <th>Action</th>
+                                </tr>
+                              </table>
+                            </div>
+
+                          </div><br>
+
+                          <div class="table-like">
+                            <div class="section-title">Goods Details</div>
+
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Goods Class</label>
+                                <select class="form-select field" id="consignorDropdown">
+                                    <option value="">-- Select Goods Class --</option>
+                                  </select>
+                              </div>
+                              <div class="col d-flex justify-content-center align-items-center gap-3">
+                                <input type="checkbox" name="" id="">
+                                <label class="fs-5 m-0">Unloading by cnee</label>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Goods Description</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                              <div class="col">
+                                <label>Value of Goods</label>
+                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                              </div>
+                            </div>
+                            
+
+                          </div>
+
+
+
+                          <!-- removed scratched area: replaced with clean placeholder -->
+                          <!-- <div style="margin-top:6px;margin-bottom:6px;">
+          <div class="clean-placeholder">[Scratched / scribbled area removed — cleaned for printing]</div>
+        </div> -->
+
+                          <!-- Invoice Details -->
+
+                          <div style="display:flex;gap:12px;margin-top:6px;">
+                            <div style="flex:1;">
+                              <label>Basis of Booking</label>
+                              <div class="field">—</div>
+                            </div>
+                            <div style="width:220px;">
+                              <label>Branch Code</label>
+                              <div class="field">—</div>
+                            </div>
+                          </div>
+
+                          <div style="display:flex;gap:12px;margin-top:6px;">
+                            <div style="flex:1;">
+                              <label>Billed with M/s</label>
+                              <div class="field">—</div>
+                            </div>
+                            <div style="width:220px;">
+                              <label>Party Code</label>
+                              <div class="field">—</div>
+                            </div>
+                          </div>
+
+                          <div style="display:flex;gap:12px;margin-top:6px;">
+                            <div style="flex:1;">
+                              <label>To Pay/ Paid/ TBB- Amount Rs.(in words)</label>
+                              <div class="field">—</div>
+                            </div>
+                            <div style="width:220px;">
+                              <label>GSTIN</label>
+                              <div class="field">—</div>
+                            </div>
+                          </div>
+
+                          <div style="margin-top:10px;">
+                            <label>Original / Main Consignment No. (with Stn. Code)</label>
+                            <div class="field">—</div>
+                          </div>
+
+                        </div> <!-- end table-like -->
+                      </div> <!-- end left -->
+
+                      <!-- RIGHT: Charges -->
+                      <aside class="charges" aria-label="Charges and bank details">
+                        <div class="top">
+
+                          <div class="d-flex justify-content-center align-items-center gap-3">
+                            <input type="checkbox"><label for="" class="m-0 fs-5"> FREIGHT PENDING</label>
+                          </div><br>
+
+                          <div class="bank">
+                            <div class="muted">CONSIGNMENT NOTE NUMBER :</div>
+                            <div class="field-distance">-</div><br>
+                            <div class="muted">Date :</div>
+                          </div><br>
+
+                          <div class="bank">
+                            <div class="muted">Unloading by consignee / YES</div><br>
+                            <div class="muted">Address of Issuing Office :</div>
+                            <div class="tiny" style="margin-top:6px;">MAHAVEER POTTERIES COMPOUND, NAGPUR ROAD, PO. PADOLI</div>
+                          </div>
+
+
+                          <div class="bank">
+                            <div style="font-weight:700;margin-bottom:6px;">BANK DETAILS :-</div>
+                            <div class="tiny"><strong>Bank Name:</strong> HDFC BANK</div>
+                            <div class="tiny"><strong>Branch:</strong> PADOLI</div>
+                            <div class="tiny"><strong>A/c:</strong> 50200096483019</div>
+                            <div class="tiny"><strong>IFSC Code:</strong> HDFC0005124</div><br><br><br><br>
+                            <div class="tiny" style="margin-top:6px;"><strong>Phone No.:</strong> 7620747297, 8999775637</div>
+                          </div>
+
+
+
+                          <div class="list" aria-hidden="false" style="margin-top:10px;">
+                            <!-- list of charge rows -->
+                            <div class="charge-row">
+                              <div>Freight</div>
+                              <div>Rs. ______</div>
+                            </div>
+                            <div class="charge-row">
+                              <div>MTRL HANDLING CHARGES</div>
+                              <div>Rs. ______</div>
+                            </div>
+                            <div class="charge-row">
+                              <div>DOOR COLLECTION CHARGES</div>
+                              <div>Rs. ______</div>
+                            </div>
+                            <div class="charge-row">
+                              <div>DOOR DELIVERY CHARGES</div>
+                              <div>Rs. ______</div>
+                            </div>
+                            <div class="charge-row">
+                              <div>MISC. CHARGES</div>
+                              <div>Rs. ______</div>
+                            </div>
+                            <div class="charge-row">
+                              <div>TOLL. CHARGES</div>
+                              <div>Rs. ______</div>
+                            </div>
+                            <div class="charge-row">
+                              <div>OTHER CHARGES</div>
+                              <div>Rs. ______</div>
+                            </div>
+                            <div class="charge-row">
+                              <div>GST</div>
+                              <div>Rs. ______</div>
+                            </div>
+                            <div class="charge-row">
+                              <div>SUB TOTAL</div>
+                              <div>Rs. ______</div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div>
+                          <div class="big-total">
+                            <div>ADV AMOUNT</div>
+                            <div>Rs. ______</div>
+                          </div>
+                          <div class="big-total" style="margin-top:8px;">
+                            <div>GRAND TOTAL</div>
+                            <div>Rs. ______</div>
+                          </div>
+
+                          <div style="margin-top:10px;font-size:12px;">
+                            <div style="font-weight:700;margin-bottom:6px;">Charges (Rs)</div>
+                            <div class="charge-row">
+                              <div>Received by :</div><br>
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                              <div>Signature / Stamp</div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </aside>
+                    </div> <!-- end content -->
+
+                    <div class="footer1">
+                      <div style="flex:1;">
+                        <div style="font-weight:700">Goods received by</div>
+                        <div class="tiny">Name &amp; Signature</div><br><br><br>
+                      </div>
+                      <div style="width:360px;">
+                        <div style="font-weight:700">Important Notes</div>
+                        <div class="tiny">All claims subject to terms &amp; conditions. Please check goods and packaging at time of
+                          receipt.</div>
                       </div>
                     </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">CONSIGNOR ADDRESS</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Address">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">CUSTOMER CODE</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Customer Code">
-                        </div>
-                      </div>
+                    <div style="display:flex; justify-content:center; align-items:center">
+                      <button class="button" value="submit">Submit</button>
                     </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">INVOICE NUMBER</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Invoice number">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">GSTIN</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter GSTIN">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">DATE</label>
-                          <input
-                            type="date"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Date">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-
-                      </div>
-                  </form>
+                  </div>
                 </div>
 
                 <!-- Consignee -->
-                <div class="card-header">
-                  <div class="card-title">CONSIGNEE INFORMATION</div>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row ">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">CONSIGNEE NAME</label>
-                          <select class="form-select p-2" id="consignorDropdown">
-                            <option value="">-- Select Consignee --</option>
-                            <option value="1">Arjun Sharma Transport</option>
-                            <option value="2">Patel Logistics Pvt Ltd</option>
-                            <option value="3">Singh Freight Services</option>
-                            <option value="4">Kumar Cargo Solutions</option>
-                            <option value="5">Desai Movers</option>
-                          </select>
-                        </div>
-                      </div>
-                        <div class="col-md-6 ">
-                          <div class="form-group">
-                            <label for="vehicle">CONSIGNEE PHONE</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="vehicleowner"
-                              placeholder="Enter Phone Number">
-                          </div>
-                        </div>
-                    </div>
 
-                      <div class="row mb-2">
-                        <div class="col-md-6 ">
-                          <div class="form-group">
-                            <label for="vehicle">CONSIGNEE ADDRESS</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="vehicle"
-                              placeholder="Enter Address">
-                          </div>
-                        </div>
-                        <div class="col-md-6 ">
-                          <div class="form-group">
-                            <label for="vehicle">CUSTOMER CODE</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="vehicleowner"
-                              placeholder="Enter Customer Code">
-                          </div>
-                        </div>
-                      </div>
 
-                      <div class="row mb-2">
-                        <div class="col-md-6 ">
-                          <div class="form-group">
-                            <label for="vehicle">PURCHASE ORDER NUMBER</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="vehicle"
-                              placeholder="Enter Purchase Order number">
-                          </div>
-                        </div>
-                        <div class="col-md-6 ">
-                          <div class="form-group">
-                            <label for="vehicle">GSTIN</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="vehicleowner"
-                              placeholder="Enter GSTIN">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-2">
-                        <div class="col-md-6 ">
-                          <div class="form-group">
-                            <label for="vehicle">DATE</label>
-                            <input
-                              type="date"
-                              class="form-control"
-                              id="vehicle"
-                              placeholder="Enter Date">
-                          </div>
-                        </div>
-                        <div class="col-md-6 ">
 
-                        </div>
-                      </div>
-                  </form>
-                </div>
 
-                <!-- Delivery Date -->
-                <div class="card-header">
-                  <div class="card-title">DELIVERY DETAILS</div>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">FROM: CODE & NAME</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Code and Name">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">TO: CODE & NAME</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Code and Name">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">DELIVERY TYPE</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Delivery Type">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">DISTANCE(in Kms)</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Distancce">
-                        </div>
-                      </div>
-                  </form>
-                </div>
-
-                <!-- Insurance Date -->
-                <div class="card-header">
-                  <div class="card-title">INSURANCE DETAILS</div>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">COMPANY</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Company Name">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">POLICY NUMBER</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Policy Number">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">AMOUNT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Amount">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">RISK</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter risk">
-                        </div>
-                      </div>
-                  </form>
-                </div>
-
-                <!-- Goods Details -->
-                <div class="card-header">
-                  <div class="card-title">GOODS/PACKAGE DETAILS</div>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">NUMBER OF PACKAGES</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Number of Packages">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">METHOD OF PACKING</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter method of packing">
-                        </div>
-                      </div>
-                  </form>
-                </div>
-
-                <div class="row mb-2">
-                  <div class="col-md-6 ">
-                    <div class="form-group">
-                      <label for="vehicle">HSN CODE</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="vehicle"
-                        placeholder="Enter HSN Code">
-                    </div>
-                  </div>
-                  <div class="col-md-6 ">
-                    <div class="form-group">
-                      <label for="vehicle">ACTUAL WEIGHT(In Kgs)</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="vehicleowner"
-                        placeholder="Enter Actual Weight">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row mb-2">
-                  <div class="col-md-6 ">
-                    <div class="form-group">
-                      <label for="vehicle">CHARGED WEIGHT</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="vehicle"
-                        placeholder="Enter Charged Weight">
-                    </div>
-                  </div>
-                  <div class="col-md-6 ">
-                    <div class="form-group">
-                      <label for="vehicle">LOAD TYPE</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="vehicleowner"
-                        placeholder="Enter Load Type">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row mb-2">
-                  <div class="col-md-6 ">
-                    <div class="form-group">
-                      <label for="vehicle">DESCRIPTION</label>
-                      <input
-                        type="textarea"
-                        class="form-control"
-                        id="vehicle"
-                        placeholder="Enter Description">
-                    </div>
-                  </div>
-                  <div class="col-md-6 ">
-                    <div class="form-group">
-                      <label for="vehicle">IDENTIFICATION/MARKS</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="vehicleowner"
-                        placeholder="Enter Identification/Marks">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row mb-2">
-                  <div class="col-md-6 ">
-                    <div class="form-group">
-                      <label for="vehicle">BUSINESS TYPE</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="vehicle"
-                        placeholder="Enter Business Type">
-                    </div>
-                  </div>
-                  <div class="col-md-6 ">
-
-                  </div>
-                  </form>
-                </div>
-
-                <!-- Dimnesion Detail -->
-                <div class="card-header">
-                  <div class="card-title">DIMENSIONS DETAILS</div>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">LENGHT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Length">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">WIDTH</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Width">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">HEIGHT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Height">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">NUMBER OF PACKAGES</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Number of packages">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">TOTAL CFT/CMT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Total CFT/CMT">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">SINGLE PIECE WEIGHT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Single Piece Weight">
-                        </div>
-                      </div>
-                  </form>
-                </div>
-
-                <!-- Payment Detail -->
-                <div class="card-header">
-                  <div class="card-title">PAYMENT DETAILS</div>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">FOR PAID CONSIGNMENTS/ ADVANCE PAYMENTS</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Paid / Advance Payment">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">M.R. NUMBER</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter M.R. Number">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">DATE</label>
-                          <input
-                            type="date"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Date">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">AMOUNT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Amount">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">DECLARED VALUE OF GOODS</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Declared value of goods">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">BASIS OF BOOKING</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Basis of booking">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">DECLARED VALUE OF GOODS</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Declared values of goods">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">BASIS OF BOOKING</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Basis of booking">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">BILLED WITH M/S</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Billed with M/s">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">BRANCH CODE</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Branch Code">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">PARTY CODE</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Party Code">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-
-                      </div>
-                  </form>
-                </div>
-
-                <!-- Charges Detail -->
-                <div class="card-header">
-                  <div class="card-title">CHARGES DETAILS</div>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">RATE</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Rate">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">FREIGHT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Freight Type">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">MTRL HANDLING CHARGES</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter MTRL charges">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">DOOR COLLECTION CHARGES</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter door collection charges">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">DOOR DELIVERY CHARGES</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter door delivery charges">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">MISC. CHARGES</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Misc. charges">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">TOLL CHARGES</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Toll Charges">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">OTHER CHARGES</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter other charges">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">SUBTOTAL</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter Subtotal">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">ADVANCE AMOUNT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter Advance amount">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">GRAND TOTAL</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter grand total">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">TO PAY/ PAID/ TBB AMOUNT</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter to pay/ paid/ tbb amount">
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-
-                <!-- Permit Detail -->
-                <div class="card-header">
-                  <div class="card-title">PERMIT DETAILS</div>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">PERMIT NUMBER</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicle"
-                            placeholder="Enter permit number">
-                        </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">RECIEVED BY</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Recieved By">
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                </form>
-              </div>
-              <div class="row">
-                <div class="col-12 d-flex justify-content-center ">
-                  <button type="submit" class=" button2">SUBMIT</button>
-                </div>
-                </form>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div><?php include "footer.php" ?>
     </div>
-  </div>
 
   </div>
 
   </div>
   </div>
-  </div><?php include "footer.php" ?>
+  </div>
 
 
 
