@@ -265,6 +265,27 @@
       border-radius: 3px;
       font-size: 10px;
     }
+    .field-dropdown{
+      border: 1px solid var(--border);
+      min-height: 36px;
+      padding: 8px;
+      background: linear-gradient(180deg, #fff, #fffafc);
+      border-radius: 3px;
+      font-size: 10px;
+      /* Hide default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='gray' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+
+  /* Ensure text doesn’t overlap the arrow */
+  padding-right: 30px;
+    }
 
     .field-distance {
       border: 1px solid var(--border);
@@ -475,7 +496,7 @@
       ?>
       <div class="container">
         <div class="page-inner">
-          
+
 
           <div class="row">
             <div class="col-md-12">
@@ -503,11 +524,13 @@
                       </div>
 
                       <div class="right-head">
-                        <div class="non-neg">NON-NEGOTIABLE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        <div class="non-neg">NON-NEGOTIABLE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           CONSIGNMENT NOTE NO.</div>
                         <!-- <div class="muted">PAN No. ALGPV0809D</div> -->
                         <div style="margin-top:10px">
-                          <div class="cons-no" aria-label="Consignment number"><div class=""><input type="text" class="border-0 bg-transparent" placeholder=""></div></div>
+                          <div class="cons-no" aria-label="Consignment number">
+                            <div class=""><input type="text" class="border-0 bg-transparent" width="200px" placeholder=""></div>
+                          </div>
                         </div>
                       </div>
                     </header>
@@ -524,11 +547,11 @@
                         <div class="row">
                           <div class="col">
                             <label>Booking Branch</label>
-                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                           </div>
                           <div class="col">
                             <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             <!-- Autofill pincode and city -->
                           </div>
 
@@ -537,44 +560,44 @@
                         <div class="row">
                           <div class="col">
                             <label>CN No. & Date</label>
-                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                           </div>
                           <div class="col">
                             <label>Delivery Type</label>
-                             <select class="form-select field" id="consignorDropdown">
-                                    <option value="">-- Select --</option>
-                                  </select> <!-- dropdown -->
+                            <select class="form-select field-dropdown" id="consignorDropdown">
+                              <option value="">-- Select --</option>
+                            </select> <!-- dropdown -->
                           </div>
                         </div>
                         <div class="row">
                           <div class="col">
                             <label>Destination Branch</label>
-                             <select class="form-select field" id="consignorDropdown">
-                                    <option value="">-- Select  --</option>
-                                  </select> <!-- dropdown -->
+                            <select class="form-select field-dropdown" id="consignorDropdown">
+                              <option value="">-- Select --</option>
+                            </select> <!-- dropdown -->
                           </div>
                           <div class="col">
                             <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             <!-- Autofill dest. drop location and pincode -->
                           </div>
                         </div>
                         <div class="row">
                           <div class="col">
                             <label>Exceptional Booking?</label>
-                             <select class="form-select field" id="consignorDropdown">
-                                    <option value="">-- Select  --</option>
-                                  </select> <!-- dropdown -->
+                            <select class="form-select field-dropdown" id="consignorDropdown">
+                              <option value="">-- Select --</option>
+                            </select> <!-- dropdown -->
                           </div>
                           <div class="col">
                             <label>Distance in Kms</label>
-                            <div class="field"><input type="text" class="border-0" placeholder=""></div> <!-- autofill -->
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
                           </div>
                         </div>
                         <div class="row">
                           <div class="col">
                             <label>Dest. loc. Landmark</label>
-                            <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                           </div>
                         </div>
 
@@ -589,7 +612,7 @@
                             <div class="col">
                               <div>
                                 <label>Select Consignor</label>
-                                <select class="form-select field" id="consignorDropdown">
+                                <select class="form-select field-dropdown" id="consignorDropdown">
                                   <option value="">-- Select Consignor --</option>
                                   <option value="1">Arjun Sharma Transport</option>
                                   <option value="2">Patel Logistics Pvt Ltd</option>
@@ -603,27 +626,27 @@
 
                             <div class="col">
                               <label>Consignor's Name</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Name"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Name"></div>
                             </div>
                             <div class="col">
                               <label>Consignor's Address</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Address"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Address"></div>
                             </div>
                             <div class="col">
                               <label>Consignor's Phone</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Phone"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Phone"></div>
                             </div>
                             <div class="col">
                               <label>Consignor's Email</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Email"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Email"></div>
                             </div>
                             <div class="col">
                               <label>Legal Name</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Legal"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Legal"></div>
                             </div>
                             <div class="col">
                               <label>Trade Name</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Trade"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Trade"></div>
                             </div>
                             <div class="col">
                               <label>From CODE &amp; Name</label>
@@ -635,7 +658,7 @@
                             <div class="col">
                               <div>
                                 <label>Select Consignee</label>
-                                <select class="form-select field" id="consignorDropdown">
+                                <select class="form-select field-dropdown" id="consignorDropdown">
                                   <option value="">-- Select Consignee --</option>
                                   <option value="1">Arjun Sharma Transport</option>
                                   <option value="2">Patel Logistics Pvt Ltd</option>
@@ -649,27 +672,27 @@
 
                             <div class="col">
                               <label>Consignee's Name</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Name"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Name"></div>
                             </div>
                             <div class="col">
                               <label>Consignee's Address</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Address"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Address"></div>
                             </div>
                             <div class="col">
                               <label>Consignee's Phone</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Phone"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Phone"></div>
                             </div>
                             <div class="col">
                               <label>Consignee's Email</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Email"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Email"></div>
                             </div>
                             <div class="col">
                               <label>Legal Name</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Legal"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Legal"></div>
                             </div>
                             <div class="col">
                               <label>Trade Name</label>
-                              <div class="field"><input type="text" class="border-0" placeholder="Trade"></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Trade"></div>
                             </div>
                             <div class="col">
                               <label>From CODE &amp; Name</label>
@@ -687,57 +710,57 @@
                             <div class="row" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Booking Basis</label>
-                                 <select class="form-select field" id="consignorDropdown">
-                                    <option value="">-- Select  --</option>
-                                  </select>  <!-- Dropdown -->
+                                <select class="form-select field-dropdown" id="consignorDropdown">
+                                  <option value="">-- Select --</option>
+                                </select> <!-- Dropdown -->
                               </div>
                               <div class="col">
                                 <label>Bill for & station</label>
-                                 <select class="form-select field" id="consignorDropdown">
-                                    <option value="">-- Select  --</option>
-                                  </select>  <!-- Dropdown -->
+                                <select class="form-select field-dropdown" id="consignorDropdown">
+                                  <option value="">-- Select --</option>
+                                </select> <!-- Dropdown -->
                               </div>
                             </div>
                             <div class="row" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Billing Party</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                               <div class="col">
                                 <label>Party Code and Unit</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                             </div>
                             <div class="row" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Billing Party GST</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                               <div class="col">
                                 <label>Legal Name</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                             </div>
                             <div class="row" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Address</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                               <div class="col">
                                 <label>Trade Name</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                             </div>
                             <div class="row" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Sector & DCC Days</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                               <div class="col">
                                 <label>CNCC Type</label>
-                                 <select class="form-select field" id="consignorDropdown">
-                                    <option value="">-- Select  --</option>
-                                  </select> <!-- Dropdown -->
+                                <select class="form-select field-dropdown" id="consignorDropdown">
+                                  <option value="">-- Select --</option>
+                                </select> <!-- Dropdown -->
                               </div>
                             </div>
 
@@ -759,14 +782,14 @@
                               </div>
                               <div class="col">
                                 <label>Package</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                             </div>
                             <div class="row" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Package Method</label>
                                 <div>
-                                  <select class="form-select field" id="consignorDropdown">
+                                  <select class="form-select field-dropdown" id="consignorDropdown">
                                     <option value="">-- Select Method --</option>
                                   </select>
                                 </div>
@@ -784,6 +807,7 @@
                                   <button class="button1">Add More</button> <!-- Adds more rows to the table below -->
                                 </div>
                               </div>
+                              <div class="row">
                               <table class="table">
                                 <tr>
                                   <th>SR No.</th>
@@ -792,6 +816,7 @@
                                   <th>Action</th>
                                 </tr>
                               </table>
+                              </div>
                             </div>
 
                           </div><br>
@@ -802,9 +827,9 @@
                             <div class="row" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Goods Class</label>
-                                <select class="form-select field" id="consignorDropdown">
-                                    <option value="">-- Select Goods Class --</option>
-                                  </select>
+                                <select class="form-select field-dropdown" id="consignorDropdown">
+                                  <option value="">-- Select Goods Class --</option>
+                                </select>
                               </div>
                               <div class="col d-flex justify-content-center align-items-center gap-3">
                                 <input type="checkbox" name="" id="">
@@ -814,63 +839,106 @@
                             <div class="row" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Goods Description</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                               <div class="col">
                                 <label>Value of Goods</label>
-                                <div class="field"><input type="text" class="border-0" placeholder=""></div>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>HSN Description</label>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>COD Amount</label>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                              </div>
+                              <div class="col">
+                                <label>Load and Unit Type</label>
+                                <div class="d-flex">
+                                  <div class="field" style="width:50%">
+                                <select class="form-select field-dropdown" id="consignorDropdown">
+                              <option value="">-- Select Load Type--</option>
+                            </select>
+                            </div> <!-- dropdown -->
+                            <div class="field" style="width:50%">
+                                <select class="form-select field-dropdown" id="consignorDropdown">
+                              <option value="">-- Select --</option>
+                            </select>
+                            </div> <!-- dropdown -->
+                            </div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>Actual Weight</label>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                              </div>
+                              <div class="col">
+                                <label>Charged Weight</label>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>L x W x H(inches)</label>
+                                <div class="d-flex">
+                                <div class="field">
+                                  <div class="col">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <div class="col">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <div class="col">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
+                              
+                              <div class="col">
+                                <label>Volume</label>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                              </div>
+                            </div>
+                            <div class="row" style="margin-bottom:6px;">
+                              <div class="col">
+                                <label>ODC Package</label>
+                                <div class="field">
+                                  <div class="col">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <label>Single Piece</label>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Invoice Details -->
+
+                          <div class="table-like">
+                            <div class="row p-2">
+                              <div class="col section-title">
+                                Invoice Details
                               </div>
                             </div>
                             
 
-                          </div>
+                          </div><br>
 
-
-
-                          <!-- removed scratched area: replaced with clean placeholder -->
-                          <!-- <div style="margin-top:6px;margin-bottom:6px;">
-          <div class="clean-placeholder">[Scratched / scribbled area removed — cleaned for printing]</div>
-        </div> -->
-
-                          <!-- Invoice Details -->
-
-                          <div style="display:flex;gap:12px;margin-top:6px;">
-                            <div style="flex:1;">
-                              <label>Basis of Booking</label>
-                              <div class="field">—</div>
-                            </div>
-                            <div style="width:220px;">
-                              <label>Branch Code</label>
-                              <div class="field">—</div>
-                            </div>
-                          </div>
-
-                          <div style="display:flex;gap:12px;margin-top:6px;">
-                            <div style="flex:1;">
-                              <label>Billed with M/s</label>
-                              <div class="field">—</div>
-                            </div>
-                            <div style="width:220px;">
-                              <label>Party Code</label>
-                              <div class="field">—</div>
-                            </div>
-                          </div>
-
-                          <div style="display:flex;gap:12px;margin-top:6px;">
-                            <div style="flex:1;">
-                              <label>To Pay/ Paid/ TBB- Amount Rs.(in words)</label>
-                              <div class="field">—</div>
-                            </div>
-                            <div style="width:220px;">
-                              <label>GSTIN</label>
-                              <div class="field">—</div>
-                            </div>
-                          </div>
-
-                          <div style="margin-top:10px;">
-                            <label>Original / Main Consignment No. (with Stn. Code)</label>
-                            <div class="field">—</div>
-                          </div>
+                          
 
                         </div> <!-- end table-like -->
                       </div> <!-- end left -->

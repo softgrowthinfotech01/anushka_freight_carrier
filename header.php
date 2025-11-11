@@ -90,6 +90,7 @@
               <li><a class="dropdown-item bg-dark text-white" href="consignor_record.php">Consignor Records</a></li>
               <li><a class="dropdown-item bg-dark text-white" href="consignee_record.php">Consignee Records</a></li>
               <li><a class="dropdown-item bg-dark text-white" href="#">Lorry Records</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="#">Invoice Records</a></li>
               
             </ul>
           </div>
