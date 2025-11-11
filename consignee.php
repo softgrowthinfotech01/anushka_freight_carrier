@@ -157,10 +157,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><?php include "footer.php" ?>
 
 
-    </div><?php include "footer.php" ?>
+    </div>
   </div>
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery-3.7.1.min.js"></script>
