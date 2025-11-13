@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <title>CN Entry Records</title>
 
   <!-- Fonts and icons -->
@@ -85,19 +85,19 @@
                           <thead>
                             <tr>
                               <th></th>
-                              <th>Name</th>
-                              <th>Position</th>
-                              <th>Office</th>
-                              <!-- <th>Action</th>   Need to make changes in associated files, js, php-->
+                              <th>Booking Number</th>
+                              <th>Consignor</th>
+                              <th>Consignee</th>
+                              <th>Action</th>
                             </tr>
                           </thead>
                           <tfoot>
                             <tr>
                               <th></th>
-                              <th>Name</th>
-                              <th>Position</th>
-                              <th>Office</th>
-                              <!-- <th>Action</th>   Need to make changes in associated files, js, php-->
+                              <th>Booking Number</th>
+                              <th>Consignor</th>
+                              <th>Consignee</th>
+                              <th>Action</th>
                             </tr>
                           </tfoot>
                         </table>
@@ -119,48 +119,56 @@
     function format(d) {
       // d is the row data object returned from the server/json
       return (
-        'Full name: ' + d.name + '<br>' +
-        'Salary: ' + d.salary + '<br>' +
-        'Start Date: ' + d.start_date + '<br>' +
-        'Office: ' + d.office
+        'Booking Number: ' + d.bn + '<br>' +
+        'Consignor: ' + d.cr + '<br>' +
+        'Consignee: ' + d.ce + '<br>'
       );
     }
 
     $(document).ready(function() {
       // Use DataTable constructor (works with DataTables v2.x)
-      const table = new DataTable('#example', {
-        ajax: 'scripts/ids-objects.php',
-        columns: [{
-            className: 'dt-control',
-            orderable: false,
-            data: null,
-            defaultContent: ''
-          },
-          {
-            data: null,
-            render: function(data, type, row) {
-              return row.name;
-            },
-            title: 'Name'
-          },
-          {
-            data: 'position'
-          },
-          {
-            data: 'office'
-          }
-        ],
+      const table = $('#example').DataTable({
+    ajax: {
+        url: 'scripts/ids-objects1.php',
+        cache: false
+    },
 
-        order: [
-          [1, 'asc']
-        ],
-        processing: true,
-        serverSide: false,
-        pageLength: 10,
-        lengthMenu: [
-          [10, 25, 50, -1],
-          [10, 25, 50, "All"]
-        ]
+        columns: [
+    {
+        className: 'dt-control',
+        orderable: false,
+        data: null,
+        defaultContent: ''
+    },
+    {
+        data: 'bn',
+        title: 'Booking Number',
+        className: 'text-start'
+    },
+    {
+        data: 'cr'
+    },
+    {
+        data: 'ce'
+    },
+    // NEW BUTTON COLUMN
+    {
+        data: null,
+        orderable: false,
+        searchable: false,
+        title: "Actions",
+        render: function(data, type, row) {
+            return `
+                <button class="btn btn-sm btn-primary me-1" onclick="editRecord('${row.id}')">
+                    Edit
+                </button>
+                <button class="btn btn-sm btn-danger" onclick="deleteRecord('${row.id}')">
+                    Delete
+                </button>
+            `;
+        }
+    }
+]
       });
 
       // track open rows
@@ -189,6 +197,17 @@
         });
       });
     });
+
+     //for buttons in table
+    function editRecord(id) {
+    alert("Edit pressed for ID: " + id);
+}
+
+function deleteRecord(id) {
+    if (confirm("Delete row ID " + id + "?")) {
+        alert("Deleted!");
+    }
+}
   </script>
 
 <!-- Commented because of conflict with cdn in header.php -->

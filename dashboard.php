@@ -546,7 +546,7 @@
 
                       <div class="head-text">
                         <h1 class="company">ANUSHKA FRIEGHT CARRIERS</h1>
-                        
+
                       </div>
 
                       <div class="right-head">
@@ -565,12 +565,28 @@
                       <!-- LEFT -->
                       <div class="form-left" role="form">
                         <!-- row 1: Company / Policy -->
+                        <div class="row ">
+                          <div class="col d-flex gap-5">
+                          <div class="d-flex align-items-center gap-1">
+                            <input type="checkbox" id="ownersrisk">
+                            <label for="ownersrisk" class="fs-6 m-0">Owner's Risk</label>
+                          </div>
+                          <div class="d-flex align-items-center gap-1">
+                            <input type="checkbox" id="doorcollection">
+                            <label for="doorcollection" class="fs-6 m-0">Door Collection</label>
+                          </div>
+                          <div class="d-flex align-items-center gap-1">
+                            <input type="checkbox" id="cancel">
+                            <label for="cancel" class="fs-6 m-0">Cancel</label>
+                          </div>
+                          </div>
+                        </div>
                         <div class="row p-2">
                           <div class="col section-title">
                             General Information
                           </div>
                         </div>
-                        <div class="row">
+                        <div class="row ">
                           <div class="col">
                             <label>Booking Branch</label>
                             <select class="form-select field-dropdown" id="consignorDropdown">
@@ -582,13 +598,32 @@
                             <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             <!-- Autofill pincode and city -->
                           </div>
+                          <div class="col">
+                            <label>&nbsp;</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            <!-- Autofill pincode and city -->
+                          </div>
 
                         </div>
 
                         <div class="row">
-                          <div class="col">
-                            <label>CN No. & Date</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          <div class="col d-flex gap-2">
+                            <div class="col">
+                              <label>CN No. & Date</label>
+                              <select class="form-select field-dropdown" id="consignorDropdown">
+                                <option value="">-- Select --</option>
+                              </select> <!-- dropdown -->
+                            </div>
+                            <div class="col">
+                              <label>&nbsp;</label>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="col">
+                              <label>&nbsp;</label>
+                              <select class="form-select field-dropdown" id="consignorDropdown">
+                                <option value="">-- Select --</option>
+                              </select> <!-- dropdown -->
+                            </div>
                           </div>
                           <div class="col">
                             <label>Delivery Type</label>
@@ -598,17 +633,24 @@
                           </div>
                         </div>
                         <div class="row">
+                          <div class="col d-flex gap-3">
                           <div class="col">
                             <label>Destination Branch</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="destination branch"></div>
+                            <!-- Autofill dest. drop location and pincode -->
+                          </div>
+                          <div class="col">
+                            <label>&nbsp;</label>
                             <select class="form-select field-dropdown" id="consignorDropdown">
                               <option value="">-- Select --</option>
                             </select> <!-- dropdown -->
                           </div>
                           <div class="col">
                             <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="delivery drop location"></div>
                             <!-- Autofill dest. drop location and pincode -->
                           </div>
+                        </div>
                         </div>
                         <div class="row">
                           <div class="col">
@@ -617,10 +659,24 @@
                               <option value="">-- Select --</option>
                             </select> <!-- dropdown -->
                           </div>
+                          <div class="col d-flex gap-2">
                           <div class="col">
                             <label>Distance in Kms</label>
                             <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
                           </div>
+                          <div class="col">
+                            <label>&nbsp;</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
+                          </div>
+                          <div class="col">
+                            <label>&nbsp;</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
+                          </div>
+                          <div class="col">
+                            <label>&nbsp;</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
+                          </div>
+                        </div>
                         </div>
                         <div class="row">
                           <div class="col">
@@ -723,7 +779,7 @@
                               <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Trade"></div>
                             </div>
                             <div class="col">
-                              <label>From CODE &amp; Name</label>
+                              <label>TO CODE &amp; Name</label>
                               <div class="field">[Code / Location]</div>
                             </div>
                           </div>
@@ -735,21 +791,27 @@
                             <div class="col section-title">
                               Billing Details
                             </div>
-                            <div class="row" style="margin-bottom:6px;">
+                            <div class="row p-0" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Booking Basis</label>
                                 <select class="form-select field-dropdown" id="consignorDropdown">
                                   <option value="">-- Select --</option>
                                 </select> <!-- Dropdown -->
                               </div>
-                              <div class="col">
+                              <div class="col d-flex gap-2">
+                                <div class="col">
                                 <label>Bill for & station</label>
                                 <select class="form-select field-dropdown" id="consignorDropdown">
                                   <option value="">-- Select --</option>
                                 </select> <!-- Dropdown -->
+                                </div>
+                                <div class="col">
+                                  <label>&nbsp;</label>
+                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                </div>
                               </div>
                             </div>
-                            <div class="row" style="margin-bottom:6px;">
+                            <div class="row p-0" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Billing Party</label>
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
@@ -759,7 +821,7 @@
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                             </div>
-                            <div class="row" style="margin-bottom:6px;">
+                            <div class="row p-0" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Billing Party GST</label>
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
@@ -769,7 +831,7 @@
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                             </div>
-                            <div class="row" style="margin-bottom:6px;">
+                            <div class="row p-0" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Address</label>
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
@@ -779,7 +841,7 @@
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                             </div>
-                            <div class="row" style="margin-bottom:6px;">
+                            <div class="row p-0" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Sector & DCC Days</label>
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
@@ -995,7 +1057,7 @@
                           </div>
 
                           <div style="margin-top:10px;font-size:12px;">
-                            
+
                             <div class="charge-row">
                               <div>Received by :</div>
                               <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
@@ -1049,7 +1111,7 @@
                           </div>
                           <div class="col">
                             <label>Load and Unit Type</label>
-                            <div class="d-flex">
+                            <div class="d-flex gap-2">
                               <div class="field" style="width:50%">
                                 <select class="form-select field-dropdown1" id="consignorDropdown">
                                   <option value="">-- Select Load Type--</option>
@@ -1076,20 +1138,20 @@
                         <div class="row" style="margin-bottom:6px;">
                           <div class="col">
                             <label>L x W x H(inches)</label>
-                            <div class="d-flex">
+                            <div class="d-flex gap-3">
                               <div class="field">
                                 <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="length">
                                 </div>
                               </div>
                               <div class="field">
                                 <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="width">
                                 </div>
                               </div>
                               <div class="field">
                                 <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="height">
                                 </div>
                               </div>
                             </div>
@@ -1127,7 +1189,7 @@
                       </div>
                       <div class="row" style="margin-bottom:6px;">
                         <div class="col">
-                          <label>Invoice No.</label>  <!-- Auto Generated -->
+                          <label>Invoice No.</label> <!-- Auto Generated -->
                           <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                         </div>
                         <div class="col">
@@ -1204,10 +1266,10 @@
                         </div>
                       </div>
                     </div>
-                    
+
 
                     <div class="footer1">
-                      
+
                     </div>
                     <div class="d-flex justify-content-center align-items-center gap-3">
                       <div>
