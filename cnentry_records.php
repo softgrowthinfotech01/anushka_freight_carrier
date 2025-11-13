@@ -151,22 +151,25 @@
             data: 'ce'
           },
           // NEW BUTTON COLUMN
-          {
-            data: null,
-            orderable: false,
-            searchable: false,
-            title: "Actions",
-            render: function(data, type, row) {
-              return `
-                <button class="btn btn-sm btn-primary me-1" onclick="editRecord('${row.id}')">
-                    Edit
-                </button>
-                <button class="btn btn-sm btn-danger" onclick="deleteRecord('${row.id}')">
-                    Delete
-                </button>
-            `;
-            }
-          }
+           {
+    data: null,
+    orderable: false,
+    searchable: false,
+    title: "Actions",
+    render: function(data, type, row) {
+      return `
+        <button class="btn btn-sm btn-primary me-1" onclick="editRecord('${row.id}')">
+            Edit
+        </button>
+        <button class="btn btn-sm btn-danger me-1" onclick="deleteRecord('${row.id}')">
+            Delete
+        </button>
+        <button class="btn btn-sm btn-success" onclick="printRecord('${row.id}')">
+            Print
+        </button>
+      `;
+    }
+}
         ]
       });
 
@@ -207,6 +210,8 @@
         alert("Deleted!");
       }
     }
+    function printRecord(id) {
+  alert("Print pressed for ID: " + id);}
   </script>
 
   <!-- Commented because of conflict with cdn in header.php -->
