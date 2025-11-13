@@ -43,6 +43,20 @@
       background-color: #008CBA;
       color: white;
     }
+    html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-panel {
+  flex: 1;
+}
+
   </style>
 
   <!-- CSS Files -->
@@ -159,14 +173,14 @@
           </div>
         </div>
 
-        </div><?php include "footer.php" ?>
+        </div>
 
 
 
       </div>
 
 
-    </div>
+    </div><?php include "footer.php" ?>
     <!--   Core JS Files   -->
     <script src="assets/js/core/jquery-3.7.1.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>

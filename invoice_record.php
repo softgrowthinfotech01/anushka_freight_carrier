@@ -98,6 +98,7 @@
                               <th>Invoice Date</th>
                               <th>Invoice Amount</th>
                               <th>Action</th>
+                              <!-- Remaining fields should be shown on clicking dropdown -->
                             </tr>
                           </tfoot>
                         </table>
