@@ -86,11 +86,11 @@
                 <hr class="dropdown-divider">
               </li>
               
-              <li><a class="dropdown-item bg-dark text-white" href="#">CN Entry Records</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="cnentry_records.php">CN Entry Records</a></li>
               <li><a class="dropdown-item bg-dark text-white" href="consignor_record.php">Consignor Records</a></li>
               <li><a class="dropdown-item bg-dark text-white" href="consignee_record.php">Consignee Records</a></li>
-              <li><a class="dropdown-item bg-dark text-white" href="#">Lorry Records</a></li>
-              <li><a class="dropdown-item bg-dark text-white" href="#">Invoice Records</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="lorry_record.php">Lorry Records</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="invoice_record.php">Invoice Records</a></li>
               
             </ul>
           </div>
@@ -122,4 +122,4 @@
     </div>
   </nav>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

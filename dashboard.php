@@ -259,32 +259,55 @@
 
     .field {
       border: 1px solid var(--border);
-      min-height: 36px;
-      padding: 8px;
+      height: 30px;
+      padding: 6px;
       background: linear-gradient(180deg, #fff, #fffafc);
       border-radius: 3px;
       font-size: 10px;
     }
-    .field-dropdown{
+
+    .field-dropdown {
       border: 1px solid var(--border);
-      min-height: 36px;
-      padding: 8px;
+      height: 30px;
+      padding: 6px;
       background: linear-gradient(180deg, #fff, #fffafc);
       border-radius: 3px;
       font-size: 10px;
       /* Hide default arrow */
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
 
-  /* Custom arrow */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='gray' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
+      /* Custom arrow */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='gray' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
 
-  /* Ensure text doesn’t overlap the arrow */
-  padding-right: 30px;
+      /* Ensure text doesn’t overlap the arrow */
+      padding-right: 30px;
+    }
+
+    .field-dropdown1 {
+      border: 0;
+      height: 20px;
+      padding: 2px;
+      background: linear-gradient(180deg, #fff, #fffafc);
+      border-radius: 3px;
+      font-size: 10px;
+      /* Hide default arrow */
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      /* Custom arrow */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='gray' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+
+      /* Ensure text doesn’t overlap the arrow */
+      padding-right: 30px;
     }
 
     .field-distance {
@@ -484,6 +507,11 @@
       color: #a22;
       font-weight: bold;
     }
+
+    /* compressing form css code */
+    /* --- Compact layout adjustments --- */
+
+    /* Reduce space between rows */
   </style>
 </head>
 
@@ -502,7 +530,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <div class="card-title text-center"></div>
+                  <div class="card-title text-center">CN Entry</div>
                 </div>
                 <div class="card-body">
                   <div class="sheet" role="document" aria-label="Consignment note">
@@ -518,9 +546,7 @@
 
                       <div class="head-text">
                         <h1 class="company">ANUSHKA FRIEGHT CARRIERS</h1>
-                        <p class="sub">Regd Office : Mahaveer Potteries Compound Nagpur Road, PO. Padoli CHANDRAPUR - 442406 &nbsp;
-                          &nbsp;</p>
-                        <p class="tiny">INSURANCE: The customer has stated that he has insured / not insured the consignment</p>
+                        
                       </div>
 
                       <div class="right-head">
@@ -547,7 +573,9 @@
                         <div class="row">
                           <div class="col">
                             <label>Booking Branch</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            <select class="form-select field-dropdown" id="consignorDropdown">
+                              <option value="">-- Select --</option>
+                            </select> <!-- dropdown -->
                           </div>
                           <div class="col">
                             <label>&nbsp;</label>
@@ -766,179 +794,73 @@
 
                           </div>
 
-
                           <!-- Package Details -->
-
                           <div class="table-like">
-                            <div class="row p-2">
-                              <div class="col section-title">
-                                Package Details
+                            <div class="section-title">Package Details</div>
+
+                            <!-- Row 1: Checkbox + Package Input -->
+                            <div class="row mb-2" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+                              <div class="col-md-6" style="flex: 1 1 48%;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                  <input type="checkbox" id="loosePackage">
+                                  <label for="loosePackage" class="fs-6 m-0">LOOSE (Zero Package)</label>
+                                </div>
                               </div>
-                            </div>
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col d-flex justify-content-center align-items-center gap-3">
-                                <input type="checkbox">
-                                <label class="fs-5 m-0">LOOSE (Zero Package)</label>
-                              </div>
-                              <div class="col">
+                              <div class="col-md-6" style="flex: 1 1 48%;">
                                 <label>Package</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                <div class="field">
+                                  <input type="text" class="border-0 w-100" placeholder="">
+                                </div>
                               </div>
                             </div>
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col">
+
+                            <!-- Row 2: Package Method + Qty + Add -->
+                            <div class="row mb-2" style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px;">
+                              <div class="col-md-6" style="flex: 1 1 48%;">
                                 <label>Package Method</label>
-                                <div>
-                                  <select class="form-select field-dropdown" id="consignorDropdown">
-                                    <option value="">-- Select Method --</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="col d-flex justify-content-center align-items-center gap-4">
-                                <div style="flex:1">
-                                  <label for="" class="ms-2">Qty.:</label>
-                                </div>
-                                <div style="flex:1">
-                                  <div class="field">
-                                    <input type="text" class="border-transparent">
-                                  </div>
-                                </div>
-                                <div style="flex:1">
-                                  <button class="button1">Add More</button> <!-- Adds more rows to the table below -->
-                                </div>
-                              </div>
-                              <div class="row">
-                              <table class="table">
-                                <tr>
-                                  <th>SR No.</th>
-                                  <th>Package Method</th>
-                                  <th>Quantity</th>
-                                  <th>Action</th>
-                                </tr>
-                              </table>
-                              </div>
-                            </div>
-
-                          </div><br>
-
-                          <div class="table-like">
-                            <div class="section-title">Goods Details</div>
-
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col">
-                                <label>Goods Class</label>
-                                <select class="form-select field-dropdown" id="consignorDropdown">
-                                  <option value="">-- Select Goods Class --</option>
+                                <select class="form-select field-dropdown">
+                                  <option value="">-- Select Method --</option>
                                 </select>
                               </div>
-                              <div class="col d-flex justify-content-center align-items-center gap-3">
-                                <input type="checkbox" name="" id="">
-                                <label class="fs-5 m-0">Unloading by cnee</label>
-                              </div>
-                            </div>
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col">
-                                <label>Goods Description</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                              </div>
-                              <div class="col">
-                                <label>Value of Goods</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                              </div>
-                            </div>
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col">
-                                <label>HSN Description</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                              </div>
-                            </div>
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col">
-                                <label>COD Amount</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                              </div>
-                              <div class="col">
-                                <label>Load and Unit Type</label>
-                                <div class="d-flex">
-                                  <div class="field" style="width:50%">
-                                <select class="form-select field-dropdown" id="consignorDropdown">
-                              <option value="">-- Select Load Type--</option>
-                            </select>
-                            </div> <!-- dropdown -->
-                            <div class="field" style="width:50%">
-                                <select class="form-select field-dropdown" id="consignorDropdown">
-                              <option value="">-- Select --</option>
-                            </select>
-                            </div> <!-- dropdown -->
-                            </div>
-                              </div>
-                            </div>
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col">
-                                <label>Actual Weight</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                              </div>
-                              <div class="col">
-                                <label>Charged Weight</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                              </div>
-                            </div>
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col">
-                                <label>L x W x H(inches)</label>
-                                <div class="d-flex">
-                                <div class="field">
-                                  <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                              <div class="col-md-6" style="flex: 1 1 48%; display: flex; align-items: center; gap: 8px;">
+                                <div style="flex: 1;">
+                                  <label>Qty.</label>
+                                  <div class="field">
+                                    <input type="text" class="border-0 w-100" placeholder="">
                                   </div>
                                 </div>
-                                <div class="field">
-                                  <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
-                                  </div>
+                                <div>
+                                  <button class="button1">Add More</button>
                                 </div>
-                                <div class="field">
-                                  <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
-                                  </div>
-                                </div>
-                                </div>
-                              </div>
-                              
-                              <div class="col">
-                                <label>Volume</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               </div>
                             </div>
-                            <div class="row" style="margin-bottom:6px;">
-                              <div class="col">
-                                <label>ODC Package</label>
-                                <div class="field">
-                                  <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <label>Single Piece</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+
+                            <!-- Table Section -->
+                            <div class="row" style="display: block;">
+                              <div class="col-12" style="width: 100%;">
+                                <table class="table" style="width: 100%; table-layout: fixed;">
+                                  <thead>
+                                    <tr>
+                                      <th>SR No.</th>
+                                      <th>Package Method</th>
+                                      <th>Quantity</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <!-- dynamic rows appear here -->
+                                  </tbody>
+                                </table>
                               </div>
                             </div>
                           </div>
 
-                          <!-- Invoice Details -->
 
-                          <div class="table-like">
-                            <div class="row p-2">
-                              <div class="col section-title">
-                                Invoice Details
-                              </div>
-                            </div>
-                            
 
-                          </div><br>
 
-                          
+
+
+
 
                         </div> <!-- end table-like -->
                       </div> <!-- end left -->
@@ -946,6 +868,11 @@
                       <!-- RIGHT: Charges -->
                       <aside class="charges" aria-label="Charges and bank details">
                         <div class="top">
+                          <div class="row p-2">
+                            <div class="col section-title fs-5">
+                              Freight Details
+                            </div>
+                          </div>
 
                           <div class="d-flex justify-content-center align-items-center gap-3">
                             <input type="checkbox"><label for="" class="m-0 fs-5"> FREIGHT PENDING</label>
@@ -953,12 +880,16 @@
 
                           <div class="bank">
                             <div class="muted">CONSIGNMENT NOTE NUMBER :</div>
-                            <div class="field-distance">-</div><br>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div><br>
                             <div class="muted">Date :</div>
+                            <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder=""></div>
                           </div><br>
 
                           <div class="bank">
-                            <div class="muted">Unloading by consignee / YES</div><br>
+                            <div class="d-flex gap-2">
+                              <div class="muted">Unloading by consignee</div><br>
+                              <input type="checkbox" name="rad">Yes <input type="checkbox" name="rad">No
+                            </div><br>
                             <div class="muted">Address of Issuing Office :</div>
                             <div class="tiny" style="margin-top:6px;">MAHAVEER POTTERIES COMPOUND, NAGPUR ROAD, PO. PADOLI</div>
                           </div>
@@ -969,7 +900,7 @@
                             <div class="tiny"><strong>Bank Name:</strong> HDFC BANK</div>
                             <div class="tiny"><strong>Branch:</strong> PADOLI</div>
                             <div class="tiny"><strong>A/c:</strong> 50200096483019</div>
-                            <div class="tiny"><strong>IFSC Code:</strong> HDFC0005124</div><br><br><br><br>
+                            <div class="tiny"><strong>IFSC Code:</strong> HDFC0005124</div><br><br>
                             <div class="tiny" style="margin-top:6px;"><strong>Phone No.:</strong> 7620747297, 8999775637</div>
                           </div>
 
@@ -978,40 +909,76 @@
                           <div class="list" aria-hidden="false" style="margin-top:10px;">
                             <!-- list of charge rows -->
                             <div class="charge-row">
-                              <div>Freight</div>
-                              <div>Rs. ______</div>
+                              <div>Rate</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                             <div class="charge-row">
-                              <div>MTRL HANDLING CHARGES</div>
-                              <div>Rs. ______</div>
+                              <div>Derived Freight</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                             <div class="charge-row">
-                              <div>DOOR COLLECTION CHARGES</div>
-                              <div>Rs. ______</div>
+                              <div>Basic Freight</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                             <div class="charge-row">
-                              <div>DOOR DELIVERY CHARGES</div>
-                              <div>Rs. ______</div>
+                              <div>A.O.C Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                             <div class="charge-row">
-                              <div>MISC. CHARGES</div>
-                              <div>Rs. ______</div>
+                              <div>FOV Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                             <div class="charge-row">
-                              <div>TOLL. CHARGES</div>
-                              <div>Rs. ______</div>
+                              <div>Cover Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                             <div class="charge-row">
-                              <div>OTHER CHARGES</div>
-                              <div>Rs. ______</div>
+                              <div>MMC Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                             <div class="charge-row">
-                              <div>GST</div>
-                              <div>Rs. ______</div>
+                              <div>Door collection charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                             <div class="charge-row">
-                              <div>SUB TOTAL</div>
-                              <div>Rs. ______</div>
+                              <div>Door Delivery Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>Pass charges </div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>Enroute Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>Statistical charges </div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>Misc. Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>COD charges </div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>Toll Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>Green Tax </div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>E-way Bill Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            </div>
+                            <div class="charge-row">
+                              <div>Other Charges</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                           </div>
 
@@ -1020,47 +987,240 @@
                         <div>
                           <div class="big-total">
                             <div>ADV AMOUNT</div>
-                            <div>Rs. ______</div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                           </div>
                           <div class="big-total" style="margin-top:8px;">
                             <div>GRAND TOTAL</div>
-                            <div>Rs. ______</div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                           </div>
 
                           <div style="margin-top:10px;font-size:12px;">
-                            <div style="font-weight:700;margin-bottom:6px;">Charges (Rs)</div>
+                            
                             <div class="charge-row">
-                              <div>Received by :</div><br>
+                              <div>Received by :</div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                               <br>
                               <br>
-                              <br>
-                              <br>
-                              <div>Signature / Stamp</div>
                             </div>
                           </div>
                         </div>
 
                       </aside>
-                    </div> <!-- end content -->
+                    </div> <!-- end content for side by side entries -->
 
-                    <div class="footer1">
-                      <div style="flex:1;">
-                        <div style="font-weight:700">Goods received by</div>
-                        <div class="tiny">Name &amp; Signature</div><br><br><br>
-                      </div>
-                      <div style="width:360px;">
-                        <div style="font-weight:700">Important Notes</div>
-                        <div class="tiny">All claims subject to terms &amp; conditions. Please check goods and packaging at time of
-                          receipt.</div>
+
+                    <!-- Goods Details -->
+                    <div class="col">
+                      <div class="table-like">
+                        <div class="section-title">Goods Details</div>
+
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>Goods Class</label>
+                            <select class="form-select field-dropdown" id="consignorDropdown">
+                              <option value="">-- Select Goods Class --</option>
+                            </select>
+                          </div>
+                          <div class="col d-flex align-items-center gap-3">
+                            <input type="checkbox" name="" id="">
+                            <label class="fs-5 m-0">Unloading by cnee</label>
+                          </div>
+                        </div>
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>Goods Description</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          </div>
+                          <div class="col">
+                            <label>Value of Goods</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          </div>
+                        </div>
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>HSN Description</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          </div>
+                        </div>
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>COD Amount</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          </div>
+                          <div class="col">
+                            <label>Load and Unit Type</label>
+                            <div class="d-flex">
+                              <div class="field" style="width:50%">
+                                <select class="form-select field-dropdown1" id="consignorDropdown">
+                                  <option value="">-- Select Load Type--</option>
+                                </select>
+                              </div> <!-- dropdown -->
+                              <div class="field" style="width:50%">
+                                <select class="form-select field-dropdown1" id="consignorDropdown">
+                                  <option value="">-- Select --</option>
+                                </select>
+                              </div> <!-- dropdown -->
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>Actual Weight</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          </div>
+                          <div class="col">
+                            <label>Charged Weight</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          </div>
+                        </div>
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>L x W x H(inches)</label>
+                            <div class="d-flex">
+                              <div class="field">
+                                <div class="col">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                </div>
+                              </div>
+                              <div class="field">
+                                <div class="col">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                </div>
+                              </div>
+                              <div class="field">
+                                <div class="col">
+                                  <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <label>Volume</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          </div>
+                        </div>
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>ODC Package</label>
+                            <div class="field">
+                              <div class="col">
+                                <input type="text" class="border-0" style="width: 100%;" placeholder="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <label>Single Piece</label>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div style="display:flex; justify-content:center; align-items:center">
-                      <button class="button" value="submit">Submit</button>
+
+                    <!-- Invoice Details -->
+
+                    <div class="table-like">
+                      <div class="row p-2">
+                        <div class="col section-title">
+                          Invoice Details
+                        </div>
+                      </div>
+                      <div class="row" style="margin-bottom:6px;">
+                        <div class="col">
+                          <label>Invoice No.</label>  <!-- Auto Generated -->
+                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                        <div class="col">
+                          <label>Invoice Date</label>
+                          <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                        <div class="col">
+                          <label>Invoice Amount</label>
+                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                        <div class="col">
+                          <label>Indent No.</label>
+                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                      </div>
+
+                      <div class="row" style="margin-bottom:6px;">
+                        <div class="col">
+                          <label>Indent Date</label>
+                          <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                        <div class="col">
+                          <label>Way Bill</label>
+                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                        <div class="col">
+                          <label>Way From Date</label>
+                          <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                        <div class="col">
+                          <label>Way To Date</label>
+                          <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                      </div>
+                      <div class=" d-flex justify-content-center align-items-center">
+                        <button class="button1" value="submit">Add More Invoice</button>
+                      </div>
+
+                    </div><br>
+                    <div class="table-like">
+                      <div class="row p-2">
+                        <div class="col section-title">
+                          Other Details
+                        </div>
+                      </div>
+                      <div class="row" style="margin-bottom:6px;">
+                        <div class="col">
+                          <label>Type of Invoice</label>
+                          <select class="form-select field-dropdown" id="consignorDropdown">
+                            <option value="">-- Select --</option>
+                          </select> <!-- dropdown -->
+                        </div>
+                        <div class="col">
+                          <label>Transport Mode</label>
+                          <select class="form-select field-dropdown" id="consignorDropdown">
+                            <option value="">-- Select --</option>
+                          </select> <!-- dropdown -->
+                        </div>
+                        <div class="col">
+                          <label>Private Marks</label>
+                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                      </div>
+                      <div class="row" style="margin-bottom:6px;">
+                        <div class="col-4">
+                          <label>DOC Prepared By</label>
+                          <select class="form-select field-dropdown" id="consignorDropdown">
+                            <option value="">-- Select --</option>
+                          </select> <!-- dropdown -->
+                        </div>
+                        <div class="col-7">
+                          <label>Remarks</label>
+                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                    <div class="footer1">
+                      
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                      <div>
+                        <button class="button" value="submit">Save</button>
+                      </div>
+                      <div style="display:flex; justify-content:center; align-items:center">
+                        <button class="button bg-secondary" value="submit">Reset</button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- Consignee -->
+
 
 
 

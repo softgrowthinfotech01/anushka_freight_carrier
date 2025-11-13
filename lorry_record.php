@@ -30,6 +30,55 @@
     });
   </script>
 
+<!-- For Action Button -->
+  <style>
+    /* Sticky action column */
+.table-responsive {
+  overflow-x: auto;
+  position: relative;
+}
+
+.sticky-column {
+  position: sticky !important;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* For striped tables */
+.table-striped tbody tr:nth-of-type(odd) .sticky-column {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-striped tbody tr:nth-of-type(even) .sticky-column {
+  background-color: #fff;
+}
+
+/* For dark tables */
+.table-dark .sticky-column {
+  background-color: #212529;
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) .sticky-column {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(even) .sticky-column {
+  background-color: #212529;
+}
+
+/* Make sure header sticky column is on top */
+.table thead .sticky-column {
+  z-index: 2;
+  background-color: #fff;
+}
+
+.table-dark thead .sticky-column {
+  background-color: #212529;
+}
+  </style>
+
   <!-- CSS Files -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/plugins.min.css" />
@@ -55,7 +104,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">Consignor Records</h4>
+                  <h4 class="card-title">Lorry Records</h4>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -65,35 +114,50 @@
                       <thead>
                         <tr>
                           <th>Sr. No.</th>
-                          <th>Consignor Name</th>
-                          <th>Consignor Phone</th>
-                          <th>Consignor Address</th>
-                          <th>Customer Code</th>
-                          <th>Invoice Number</th>
-                          <th>GSTIN</th>
-                          <th class="sticky-column bg-light">Action</th>
+                          <th>Vehicle Number</th>
+                          <th>Vehicle Name</th>
+                          <th>RC Number</th>
+                          <th>Owner Name</th>
+                          <th>Owner Phone</th>
+                          <th>Owner Address</th>
+                          <th>Driver Name</th>
+                          <th>Driver Phone</th>
+                          <th>Driver Address</th>
+                          <th>Driver ID</th>
+                          <th>Remarks</th>
+                          <th class="sticky-column">Action</th>
                         </tr>
                       </thead>
                       <tfoot>
                         <tr>
                           <th>Sr. No.</th>
-                          <th>Consignor Name</th>
-                          <th>Consignor Phone</th>
-                          <th>Consignor Address</th>
-                          <th>Customer Code</th>
-                          <th>Invoice Number</th>
-                          <th>GSTIN</th>
-                          <th class="sticky-column bg-light">Action</th>
+                          <th>Vehicle Number</th>
+                          <th>Vehicle Name</th>
+                          <th>RC Number</th>
+                          <th>Owner Name</th>
+                          <th>Owner Phone</th>
+                          <th>Owner Address</th>
+                          <th>Driver Name</th>
+                          <th>Driver Phone</th>
+                          <th>Driver Address</th>
+                          <th>Driver ID</th>
+                          <th>Remarks</th>
+                          <th class="sticky-column">Action</th>
                         </tr>
                       </tfoot>
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>Amit Kumar</td>
-                          <td>7896321450</td>
+                          <td>MH34EA2222 </td>
+                          <td>Tata Ace</td>
+                          <td>KA01GK2485</td>
+                          <td>Arjun Sharma</td>
+                          <td>7896321455</td>
                           <td>Chandrapur</td>
-                          <td>789654</td>
-                          <td>789632145</td>
+                          <td>Vikram Patel</td>
+                          <td>7539514682</td>
+                          <td>Chandrapur</td>
+                          <td>DL</td>
                           <td>...</td>
                           <td class="sticky-column bg-light">
                             <div class="btn-group-vertical d-flex gap-1" role="group" aria-label="Vertical radio toggle button group">
@@ -106,12 +170,17 @@
                         </tr>
 
                         <tr>
-                          <td>2</td>
-                          <td>Rohan Desai</td>
-                          <td>1236987450</td>
-                          <td>Mumbai</td>
-                          <td>123654</td>
-                          <td>987456321</td>
+                          <td>1</td>
+                          <td>MH34EA2222 </td>
+                          <td>Tata Intra</td>
+                          <td>KA01GK4528</td>
+                          <td>Viraj Sharma</td>
+                          <td>7896321455</td>
+                          <td>Chandrapur</td>
+                          <td>Sahil Patel</td>
+                          <td>7539514682</td>
+                          <td>Warora</td>
+                          <td>DL</td>
                           <td>...</td>
                           <td class="sticky-column bg-light">
                             <div class="btn-group-vertical d-flex gap-1" role="group" aria-label="Vertical radio toggle button group">
@@ -124,12 +193,17 @@
                         </tr>
 
                         <tr>
-                          <td>3</td>
-                          <td>Aditya Mehta</td>
-                          <td>5642138970</td>
-                          <td>Delhi</td>
-                          <td>789123</td>
-                          <td>987412563</td>
+                          <td>1</td>
+                          <td>MH34EA2222 </td>
+                          <td>Tata Intra</td>
+                          <td>KA01GK7412</td>
+                          <td>Arjun Patel</td>
+                          <td>7896321455</td>
+                          <td>Rajura</td>
+                          <td>Vikram Sharma</td>
+                          <td>7539514682</td>
+                          <td>Chandrapur</td>
+                          <td>DL</td>
                           <td>...</td>
                           <td class="sticky-column bg-light">
                             <div class="btn-group-vertical d-flex gap-1" role="group" aria-label="Vertical radio toggle button group">
