@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <title>Invoice Records</title>
 
   <!-- Fonts and icons -->
@@ -61,12 +61,12 @@
 </head>
 
 <body>
-  
+
   <div class="wrapper">
     <!-- Header -->
-  <?php
-  require "header.php";
-  ?>
+    <?php
+    require "header.php";
+    ?>
     <div class="main-panel">
 
       <div class="container">
@@ -113,7 +113,7 @@
     </div>
 
   </div><!-- Footer -->
-      <?php include "footer.php"; ?>
+  <?php include "footer.php"; ?>
 
   <script>
     function format(d) {
@@ -121,46 +121,45 @@
       return (
         'Invoice Number: ' + d.in + '<br>' +
         'Invoice Date: ' + d.ind + '<br>' +
-        'Invoice Amount: ' + d.ina + '<br>' 
-        
+        'Invoice Amount: ' + d.ina + '<br>'
+
       );
     }
 
     $(document).ready(function() {
       // Use DataTable constructor (works with DataTables v2.x)
       const table = $('#example').DataTable({
-    ajax: {
-        url: 'scripts/ids-objects1.php',
-        cache: false
-    },
-        columns: [
-    {
-        className: 'dt-control',
-        orderable: false,
-        data: null,
-        defaultContent: ''
-    },
-    {
-        data: 'in',
-        title: 'Invoice Number',
-        className: 'text-start'
-    },
-    {
-        data: 'ind'
-    },
-    {
-        data: 'ina',
-        className: 'text-start'
+        ajax: {
+          url: 'scripts/ids-objects.php',
+          cache: false
+        },
+        columns: [{
+            className: 'dt-control',
+            orderable: false,
+            data: null,
+            defaultContent: ''
+          },
+          {
+            data: 'in',
+            title: 'Invoice Number',
+            className: 'text-start'
+          },
+          {
+            data: 'ind'
+          },
+          {
+            data: 'ina',
+            className: 'text-start'
 
-    },
-    // NEW BUTTON COLUMN
-    {
-        data: null,
-        orderable: false,
-        searchable: false,
-        title: "Actions",
-        render: function(data, type, row) {
-            return `
+          },
+          // NEW BUTTON COLUMN
+          {
+            data: null,
+            orderable: false,
+            searchable: false,
+            title: "Actions",
+            render: function(data, type, row) {
+              return `
                 <button class="btn btn-sm btn-primary me-1" onclick="editRecord('${row.id}')">
                     Edit
                 </button>
@@ -168,9 +167,9 @@
                     Delete
                 </button>
             `;
-        }
-    }
-]
+            }
+          }
+        ]
 
       });
 
@@ -200,20 +199,19 @@
         });
       });
     });
-      //for buttons in table
+    //for buttons in table
     function editRecord(id) {
-    alert("Edit pressed for ID: " + id);
-}
-
-function deleteRecord(id) {
-    if (confirm("Delete row ID " + id + "?")) {
-        alert("Deleted!");
+      alert("Edit pressed for ID: " + id);
     }
-}
 
+    function deleteRecord(id) {
+      if (confirm("Delete row ID " + id + "?")) {
+        alert("Deleted!");
+      }
+    }
   </script>
 
-<!-- Commented because of conflict with cdn in header.php -->
+  <!-- Commented because of conflict with cdn in header.php -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 
   <style>
@@ -277,12 +275,9 @@ function deleteRecord(id) {
 
     /* for misalignment issue */
     body {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-
-
+      margin: 0 !important;
+      padding: 0 !important;
+    }
   </style>
 
 </body>

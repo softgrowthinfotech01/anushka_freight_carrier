@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 
 $data = [
     "data" => [
@@ -28,9 +29,9 @@ $data = [
             "in" => "123456",
             "ind" => "12/12/2025",
             "ina" => "3000",
-            "bn" => "1234",
-            "cr" => "Arjun Patel",
-            "ce" => "Dev Rathi"
+            "bn" => "2311",
+            "cr" => "Raj Patel",
+            "ce" => "Viraj Rathi"
         ],
         [
             "id" => "3",
@@ -43,9 +44,12 @@ $data = [
             "in" => "123456",
             "ind" => "12/12/2025",
             "ina" => "3000",
-            "bn" => "1234",
-            "cr" => "Arjun Patel",
-            "ce" => "Dev Rathi"
+            "bn" => "9856",
+            "cr" => "Ram Patel",
+            "ce" => "Adi Rathi"
         ]
     ]
 ];
+echo json_encode($data);
+exit;
+
