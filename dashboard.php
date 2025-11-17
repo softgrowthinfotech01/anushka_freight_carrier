@@ -537,28 +537,7 @@
                     <div class="watermark">AFC</div>
 
                     <header>
-                      <div class="logo" aria-hidden="true">
-                        <!-- simple emblem placeholder -->
-                        <div>
-                          <img src="logo-AC.png" alt="logoAC" class="img-fluid">
-                        </div>
-                      </div>
 
-                      <div class="head-text">
-                        <h1 class="company">ANUSHKA FRIEGHT CARRIERS</h1>
-
-                      </div>
-
-                      <div class="right-head">
-                        <div class="non-neg">NON-NEGOTIABLE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          CONSIGNMENT NOTE NO.</div>
-                        <!-- <div class="muted">PAN No. ALGPV0809D</div> -->
-                        <div style="margin-top:10px">
-                          <div class="cons-no" aria-label="Consignment number">
-                            <div class=""><input type="text" class="border-0 bg-transparent" width="200px" placeholder=""></div>
-                          </div>
-                        </div>
-                      </div>
                     </header>
 
                     <div class="content">
@@ -567,18 +546,18 @@
                         <!-- row 1: Company / Policy -->
                         <div class="row ">
                           <div class="col d-flex gap-5">
-                          <div class="d-flex align-items-center gap-1">
-                            <input type="checkbox" id="ownersrisk">
-                            <label for="ownersrisk" class="fs-6 m-0">Owner's Risk</label>
-                          </div>
-                          <div class="d-flex align-items-center gap-1">
-                            <input type="checkbox" id="doorcollection">
-                            <label for="doorcollection" class="fs-6 m-0">Door Collection</label>
-                          </div>
-                          <div class="d-flex align-items-center gap-1">
-                            <input type="checkbox" id="cancel">
-                            <label for="cancel" class="fs-6 m-0">Cancel</label>
-                          </div>
+                            <div class="d-flex align-items-center gap-1">
+                              <input type="checkbox" id="ownersrisk">
+                              <label for="ownersrisk" class="fs-6 m-0">Owner's Risk</label>
+                            </div>
+                            <div class="d-flex align-items-center gap-1">
+                              <input type="checkbox" id="doorcollection">
+                              <label for="doorcollection" class="fs-6 m-0">Door Collection</label>
+                            </div>
+                            <div class="d-flex align-items-center gap-1">
+                              <input type="checkbox" id="cancel">
+                              <label for="cancel" class="fs-6 m-0">Cancel</label>
+                            </div>
                           </div>
                         </div>
                         <div class="row p-2">
@@ -595,15 +574,14 @@
                           </div>
                           <div class="col">
                             <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="Pincode"></div>
                             <!-- Autofill pincode and city -->
                           </div>
                           <div class="col">
                             <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="City"></div>
                             <!-- Autofill pincode and city -->
                           </div>
-
                         </div>
 
                         <div class="row">
@@ -611,18 +589,17 @@
                             <div class="col">
                               <label>CN No. & Date</label>
                               <select class="form-select field-dropdown" id="consignorDropdown">
-                                <option value="">-- Select --</option>
+                                <option value="">-- Select --</option> <!-- Alphabet Letter -->
                               </select> <!-- dropdown -->
                             </div>
                             <div class="col">
                               <label>&nbsp;</label>
-                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="numbers"></div>
+                              <!-- Numbers -->
                             </div>
                             <div class="col">
                               <label>&nbsp;</label>
-                              <select class="form-select field-dropdown" id="consignorDropdown">
-                                <option value="">-- Select --</option>
-                              </select> <!-- dropdown -->
+                              <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder=""></div>
                             </div>
                           </div>
                           <div class="col">
@@ -634,23 +611,23 @@
                         </div>
                         <div class="row">
                           <div class="col d-flex gap-3">
-                          <div class="col">
-                            <label>Destination Branch</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="destination branch"></div>
-                            <!-- Autofill dest. drop location and pincode -->
+                            <div class="col">
+                              <label>Destination Branch</label>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="destination branch"></div>
+                              <!-- Autofill dest. drop location and pincode -->
+                            </div>
+                            <div class="col">
+                              <label>&nbsp;</label>
+                              <select class="form-select field-dropdown" id="consignorDropdown">
+                                <option value="">-- Select --</option>
+                              </select> <!-- dropdown -->
+                            </div>
+                            <div class="col">
+                              <label>&nbsp;</label>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="delivery drop location"></div>
+                              <!-- Autofill dest. drop location and pincode -->
+                            </div>
                           </div>
-                          <div class="col">
-                            <label>&nbsp;</label>
-                            <select class="form-select field-dropdown" id="consignorDropdown">
-                              <option value="">-- Select --</option>
-                            </select> <!-- dropdown -->
-                          </div>
-                          <div class="col">
-                            <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="delivery drop location"></div>
-                            <!-- Autofill dest. drop location and pincode -->
-                          </div>
-                        </div>
                         </div>
                         <div class="row">
                           <div class="col">
@@ -660,23 +637,23 @@
                             </select> <!-- dropdown -->
                           </div>
                           <div class="col d-flex gap-2">
-                          <div class="col">
-                            <label>Distance in Kms</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
+                            <div class="col">
+                              <label>Distance in Kms</label>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
+                            </div>
+                            <div class="col">
+                              <label>&nbsp;</label>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
+                            </div>
+                            <div class="col">
+                              <label>&nbsp;</label>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
+                            </div>
+                            <div class="col">
+                              <label>&nbsp;</label>
+                              <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
+                            </div>
                           </div>
-                          <div class="col">
-                            <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
-                          </div>
-                          <div class="col">
-                            <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
-                          </div>
-                          <div class="col">
-                            <label>&nbsp;</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div> <!-- autofill -->
-                          </div>
-                        </div>
                         </div>
                         <div class="row">
                           <div class="col">
@@ -800,14 +777,14 @@
                               </div>
                               <div class="col d-flex gap-2">
                                 <div class="col">
-                                <label>Bill for & station</label>
-                                <select class="form-select field-dropdown" id="consignorDropdown">
-                                  <option value="">-- Select --</option>
-                                </select> <!-- Dropdown -->
+                                  <label>Bill for & station</label>
+                                  <select class="form-select field-dropdown" id="consignorDropdown">
+                                    <option value="">-- Select --</option>
+                                  </select> <!-- Dropdown -->
                                 </div>
                                 <div class="col">
                                   <label>&nbsp;</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                  <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                                 </div>
                               </div>
                             </div>
@@ -818,7 +795,14 @@
                               </div>
                               <div class="col">
                                 <label>Party Code and Unit</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                <div class="col d-flex gap-2">
+                                  <div class="col">
+                                    <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                             <div class="row p-0" style="margin-bottom:6px;">
@@ -844,7 +828,14 @@
                             <div class="row p-0" style="margin-bottom:6px;">
                               <div class="col">
                                 <label>Sector & DCC Days</label>
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                <div class="col d-flex gap-2">
+                                  <div class="col">
+                                    <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                                  </div>
+                                </div>
                               </div>
                               <div class="col">
                                 <label>CNCC Type</label>
@@ -856,66 +847,7 @@
 
                           </div>
 
-                          <!-- Package Details -->
-                          <div class="table-like">
-                            <div class="section-title">Package Details</div>
-
-                            <!-- Row 1: Checkbox + Package Input -->
-                            <div class="row mb-2" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
-                              <div class="col-md-6" style="flex: 1 1 48%;">
-                                <div style="display: flex; align-items: center; gap: 8px;">
-                                  <input type="checkbox" id="loosePackage">
-                                  <label for="loosePackage" class="fs-6 m-0">LOOSE (Zero Package)</label>
-                                </div>
-                              </div>
-                              <div class="col-md-6" style="flex: 1 1 48%;">
-                                <label>Package</label>
-                                <div class="field">
-                                  <input type="text" class="border-0 w-100" placeholder="">
-                                </div>
-                              </div>
-                            </div>
-
-                            <!-- Row 2: Package Method + Qty + Add -->
-                            <div class="row mb-2" style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px;">
-                              <div class="col-md-6" style="flex: 1 1 48%;">
-                                <label>Package Method</label>
-                                <select class="form-select field-dropdown">
-                                  <option value="">-- Select Method --</option>
-                                </select>
-                              </div>
-                              <div class="col-md-6" style="flex: 1 1 48%; display: flex; align-items: center; gap: 8px;">
-                                <div style="flex: 1;">
-                                  <label>Qty.</label>
-                                  <div class="field">
-                                    <input type="text" class="border-0 w-100" placeholder="">
-                                  </div>
-                                </div>
-                                <div>
-                                  <button class="button1">Add More</button>
-                                </div>
-                              </div>
-                            </div>
-
-                            <!-- Table Section -->
-                            <div class="row" style="display: block;">
-                              <div class="col-12" style="width: 100%;">
-                                <table class="table" style="width: 100%; table-layout: fixed;">
-                                  <thead>
-                                    <tr>
-                                      <th>SR No.</th>
-                                      <th>Package Method</th>
-                                      <th>Quantity</th>
-                                      <th>Action</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <!-- dynamic rows appear here -->
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div>
-                          </div>
+                         
 
 
 
@@ -939,35 +871,6 @@
                           <div class="d-flex justify-content-center align-items-center gap-3">
                             <input type="checkbox"><label for="" class="m-0 fs-5"> FREIGHT PENDING</label>
                           </div><br>
-
-                          <div class="bank">
-                            <div class="muted">CONSIGNMENT NOTE NUMBER :</div>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div><br>
-                            <div class="muted">Date :</div>
-                            <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div><br>
-
-                          <div class="bank">
-                            <div class="d-flex gap-2">
-                              <div class="muted">Unloading by consignee</div><br>
-                              <input type="checkbox" name="rad">Yes <input type="checkbox" name="rad">No
-                            </div><br>
-                            <div class="muted">Address of Issuing Office :</div>
-                            <div class="tiny" style="margin-top:6px;">MAHAVEER POTTERIES COMPOUND, NAGPUR ROAD, PO. PADOLI</div>
-                          </div>
-
-
-                          <div class="bank">
-                            <div style="font-weight:700;margin-bottom:6px;">BANK DETAILS :-</div>
-                            <div class="tiny"><strong>Bank Name:</strong> HDFC BANK</div>
-                            <div class="tiny"><strong>Branch:</strong> PADOLI</div>
-                            <div class="tiny"><strong>A/c:</strong> 50200096483019</div>
-                            <div class="tiny"><strong>IFSC Code:</strong> HDFC0005124</div><br><br>
-                            <div class="tiny" style="margin-top:6px;"><strong>Phone No.:</strong> 7620747297, 8999775637</div>
-                          </div>
-
-
-
                           <div class="list" aria-hidden="false" style="margin-top:10px;">
                             <!-- list of charge rows -->
                             <div class="charge-row">
@@ -1070,114 +973,67 @@
                       </aside>
                     </div> <!-- end content for side by side entries -->
 
+                     <!-- Package Details -->
+                          <div class="table-like">
+                            <div class="section-title">Package Details</div>
 
-                    <!-- Goods Details -->
-                    <div class="col">
-                      <div class="table-like">
-                        <div class="section-title">Goods Details</div>
+                            <!-- Row 1: Checkbox + Package Input -->
+                            <div class="row mb-2" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+                              <div class="col-md-6" style="flex: 1 1 48%;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                  <input type="checkbox" id="loosePackage">
+                                  <label for="loosePackage" class="fs-6 m-0">LOOSE (Zero Package)</label>
+                                </div>
+                              </div>
+                              <div class="col-md-6" style="flex: 1 1 48%;">
+                                <label>Package</label>
+                                <div class="field">
+                                  <input type="text" class="border-0 w-100" placeholder="">
+                                </div>
+                              </div>
+                            </div>
 
-                        <div class="row" style="margin-bottom:6px;">
-                          <div class="col">
-                            <label>Goods Class</label>
-                            <select class="form-select field-dropdown" id="consignorDropdown">
-                              <option value="">-- Select Goods Class --</option>
-                            </select>
-                          </div>
-                          <div class="col d-flex align-items-center gap-3">
-                            <input type="checkbox" name="" id="">
-                            <label class="fs-5 m-0">Unloading by cnee</label>
-                          </div>
-                        </div>
-                        <div class="row" style="margin-bottom:6px;">
-                          <div class="col">
-                            <label>Goods Description</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div>
-                          <div class="col">
-                            <label>Value of Goods</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div>
-                        </div>
-                        <div class="row" style="margin-bottom:6px;">
-                          <div class="col">
-                            <label>HSN Description</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div>
-                        </div>
-                        <div class="row" style="margin-bottom:6px;">
-                          <div class="col">
-                            <label>COD Amount</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div>
-                          <div class="col">
-                            <label>Load and Unit Type</label>
-                            <div class="d-flex gap-2">
-                              <div class="field" style="width:50%">
-                                <select class="form-select field-dropdown1" id="consignorDropdown">
-                                  <option value="">-- Select Load Type--</option>
+                            <!-- Row 2: Package Method + Qty + Add -->
+                            <div class="row mb-2" style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px;">
+                              <div class="col-md-6" style="flex: 1 1 48%;">
+                                <label>Package Method</label>
+                                <select class="form-select field-dropdown">
+                                  <option value="">-- Select Method --</option>
                                 </select>
-                              </div> <!-- dropdown -->
-                              <div class="field" style="width:50%">
-                                <select class="form-select field-dropdown1" id="consignorDropdown">
-                                  <option value="">-- Select --</option>
-                                </select>
-                              </div> <!-- dropdown -->
+                              </div>
+                              <div class="col-md-6" style="flex: 1 1 48%; display: flex; align-items: center; gap: 8px;">
+                                <div style="flex: 1;">
+                                  <label>Qty.</label>
+                                  <div class="field">
+                                    <input type="text" class="border-0 w-100" placeholder="">
+                                  </div>
+                                </div>
+                                <div>
+                                  <button class="button1">Add More</button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="row" style="margin-bottom:6px;">
-                          <div class="col">
-                            <label>Actual Weight</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div>
-                          <div class="col">
-                            <label>Charged Weight</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div>
-                        </div>
-                        <div class="row" style="margin-bottom:6px;">
-                          <div class="col">
-                            <label>L x W x H(inches)</label>
-                            <div class="d-flex gap-3">
-                              <div class="field">
-                                <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="length">
-                                </div>
-                              </div>
-                              <div class="field">
-                                <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="width">
-                                </div>
-                              </div>
-                              <div class="field">
-                                <div class="col">
-                                  <input type="text" class="border-0" style="width: 100%;" placeholder="height">
-                                </div>
+
+                            <!-- Table Section -->
+                            <div class="row" style="display: block;">
+                              <div class="col-12" style="width: 100%;">
+                                <table class="table" style="width: 100%; table-layout: fixed;">
+                                  <thead>
+                                    <tr>
+                                      <th>SR No.</th>
+                                      <th>Package Method</th>
+                                      <th>Quantity</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <!-- dynamic rows appear here -->
+                                  </tbody>
+                                </table>
                               </div>
                             </div>
                           </div>
 
-                          <div class="col">
-                            <label>Volume</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div>
-                        </div>
-                        <div class="row" style="margin-bottom:6px;">
-                          <div class="col">
-                            <label>ODC Package</label>
-                            <div class="field">
-                              <div class="col">
-                                <input type="text" class="border-0" style="width: 100%;" placeholder="">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <label>Single Piece</label>
-                            <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
                     <!-- Invoice Details -->
 
@@ -1190,7 +1046,7 @@
                       <div class="row" style="margin-bottom:6px;">
                         <div class="col">
                           <label>Invoice No.</label> <!-- Auto Generated -->
-                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
+                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="auto generated"></div>
                         </div>
                         <div class="col">
                           <label>Invoice Date</label>
@@ -1235,64 +1091,46 @@
                           Other Details
                         </div>
                       </div>
-                      <div class="row" style="margin-bottom:6px;">
-                        <div class="col">
-                          <label>Type of Invoice</label>
-                          <select class="form-select field-dropdown" id="consignorDropdown">
-                            <option value="">-- Select --</option>
-                          </select> <!-- dropdown -->
-                        </div>
-                        <div class="col">
-                          <label>Transport Mode</label>
-                          <select class="form-select field-dropdown" id="consignorDropdown">
-                            <option value="">-- Select --</option>
-                          </select> <!-- dropdown -->
-                        </div>
+                      <div class="row">
                         <div class="col">
                           <label>Private Marks</label>
                           <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                         </div>
-                      </div>
-                      <div class="row" style="margin-bottom:6px;">
-                        <div class="col-4">
-                          <label>DOC Prepared By</label>
-                          <select class="form-select field-dropdown" id="consignorDropdown">
-                            <option value="">-- Select --</option>
-                          </select> <!-- dropdown -->
-                        </div>
-                        <div class="col-7">
-                          <label>Remarks</label>
-                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
-                        </div>
+                      
+                      <div class="col">
+                        <label>Remarks</label>
+                        <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder=""></div>
                       </div>
                     </div>
-
-
-                    <div class="footer1">
-
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center gap-3">
-                      <div>
-                        <button class="button" value="submit">Save</button>
-                      </div>
-                      <div style="display:flex; justify-content:center; align-items:center">
-                        <button class="button bg-secondary" value="submit">Reset</button>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
 
 
+                <div class="footer1">
 
-
-
-
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <div>
+                    <button class="button" value="submit">Save</button>
+                  </div>
+                  <div style="display:flex; justify-content:center; align-items:center">
+                    <button class="button bg-secondary" value="submit">Reset</button>
+                  </div>
+                </div>
               </div>
             </div>
+
+
+
+
+
+
           </div>
         </div>
-      </div><?php include "footer.php" ?>
+      </div>
     </div>
+  </div><?php include "footer.php" ?>
+  </div>
 
   </div>
 

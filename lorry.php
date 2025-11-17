@@ -157,7 +157,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6 ">
-
+                                                <div class="form-group">
+                                                    <form action="/upload-document" method="post" enctype="multipart/form-data">
+  <label for="document-upload">Upload Document:</label>
+  <input type="file" id="document-upload" name="document">
+  <input type="submit" value="Submit">
+</form>
+                                                </div>
                                             </div>
                                         </div>
 
