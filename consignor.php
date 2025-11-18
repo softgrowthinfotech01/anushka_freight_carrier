@@ -126,12 +126,12 @@
                       </div>
                       <div class="col-md-6 ">
                         <div class="form-group">
-                          <label for="vehicle">CUSTOMER CODE</label>
+                          <label for="vehicle">GSTIN</label>
                           <input
                             type="text"
                             class="form-control"
                             id="vehicleowner"
-                            placeholder="Enter Customer Code">
+                            placeholder="Enter GSTIN">
                         </div>
                       </div>
                     </div>
@@ -148,14 +148,7 @@
                         </div>
                       </div>
                       <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">GSTIN</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter GSTIN">
-                        </div>
+                        
                       </div>
                     </div>
                     

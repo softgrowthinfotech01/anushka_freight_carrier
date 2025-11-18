@@ -2,70 +2,70 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> Lorry</title>
-  <meta
-    content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Lorry</title>
+    <meta
+        content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        name="viewport" />
 
-  <!-- Fonts and icons -->
-  <script src="assets/js/plugin/webfont/webfont.min.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ["Public Sans:300,400,500,600,700"]
-      },
-      custom: {
-        families: [
-          "Font Awesome 5 Solid",
-          "Font Awesome 5 Regular",
-          "Font Awesome 5 Brands",
-          "simple-line-icons",
-        ],
-        urls: ["assets/css/fonts.min.css"],
-      },
-      active: function() {
-        sessionStorage.fonts = true;
-      },
-    });
-  </script>
-  <style>
-    .button2 {
-      background-color: white;
-      color: black;
-      border: 2px solid #008CBA;
-      width: 100px;
-      height: 50px;
-      border-radius: 5px;
-    }
+    <!-- Fonts and icons -->
+    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Public Sans:300,400,500,600,700"]
+            },
+            custom: {
+                families: [
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["assets/css/fonts.min.css"],
+            },
+            active: function() {
+                sessionStorage.fonts = true;
+            },
+        });
+    </script>
+    <style>
+        .button2 {
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+        }
 
-    .button2:hover {
-      background-color: #008CBA;
-      color: white;
-    }
-  </style>
+        .button2:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
 
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/plugins.min.css" />
-  <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
 
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link rel="stylesheet" href="assets/css/demo.css" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="assets/css/demo.css" />
 </head>
 
 <body>
-  <div class="wrapper">
+    <div class="wrapper">
 
-    <div class="main-panel">
-      <?php
-      require "header.php";
-      ?>
+        <div class="main-panel">
+            <?php
+            require "header.php";
+            ?>
 
-      <div class="container">
+            <div class="container">
                 <div class="page-inner">
 
-                
+
 
                     <div class="row">
                         <div class="col-md-12">
@@ -115,11 +115,11 @@
                                         </div>
 
                                         <div class="row mb-2">
-                                            
-                                                <div class="card-header">
-                                                    <div class="card-title">OWNER INFORMATION</div>
-                                                </div>
-                                            
+
+                                            <div class="card-header">
+                                                <div class="card-title">OWNER INFORMATION</div>
+                                            </div>
+
                                         </div>
 
                                         <div class="row mb-2 owner">
@@ -158,21 +158,24 @@
                                             </div>
                                             <div class="col-md-6 ">
                                                 <div class="form-group">
+                                                    <label>ID Proof</label>
+                                                    <div>
+                                                    <div class="form-group form-control p-2">
                                                     <form action="/upload-document" method="post" enctype="multipart/form-data">
-  <label for="document-upload">Upload Document:</label>
-  <input type="file" id="document-upload" name="document">
-  <input type="submit" value="Submit">
-</form>
+                                                        <input type="file" id="document-upload" name="document">
+                                                    </form>
+                                                </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row mb-2">
-                                            
-                                                <div class="card-header">
-                                                    <div class="card-title">DRIVER INFORMATION</div>
-                                                </div>
-                                            
+
+                                            <div class="card-header">
+                                                <div class="card-title">DRIVER INFORMATION</div>
+                                            </div>
+
                                         </div>
 
                                         <div class="row mb-2 driver">
@@ -212,22 +215,22 @@
                                             <div class="col-md-6 ">
                                                 <div class="form-group">
                                                     <label for="idproof">ID PROOF</label>
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="idproof"
-                                                        placeholder="Enter ID Proof" />
+                                                    <div class="form-group form-control p-2">
+                                                    <form action="/upload-document" method="post" enctype="multipart/form-data">
+                                                        <input type="file" id="document-upload" name="document">
+                                                    </form>
+                                                </div>
                                                 </div>
 
                                             </div>
                                         </div>
 
                                         <div class="row mb-2">
-                                            
-                                                <div class="card-header">
-                                                    <div class="card-title">REMARK</div>
-                                                </div>
-                                            
+
+                                            <div class="card-header">
+                                                <div class="card-title">REMARK</div>
+                                            </div>
+
                                         </div>
 
 
@@ -247,10 +250,10 @@
                                         </div>
 
                                         <div class="row">
-                      <div class="col-12 d-flex justify-content-center ">
-                        <button type="submit" class=" button2">SUBMIT</button>
-                      </div>
-                    </div> 
+                                            <div class="col-12 d-flex justify-content-center ">
+                                                <button type="submit" class=" button2">SUBMIT</button>
+                                            </div>
+                                        </div>
 
 
 
@@ -265,10 +268,10 @@
                 </div>
             </div>
 
-      <?php include "footer.php" ?>
-      </div>
+            <?php include "footer.php" ?>
+        </div>
 
-      
+
     </div>
     <!--   Core JS Files   -->
     <script src="assets/js/core/jquery-3.7.1.min.js"></script>
@@ -314,12 +317,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-

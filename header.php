@@ -30,8 +30,8 @@
       <h2 class="me-5 mb-0 text-white"><a href="dashboard.php">Dashboard</a></h2>
 
       <!-- Main Menu -->
-      <ul class="navbar-nav me-auto ms-5 gap-3">
-        <li class="nav-item dropdown gap-3">
+      <ul class="navbar-nav me-auto ms-5 gap-1">
+        <li class="nav-item dropdown gap-1">
           <div class="btn-group">
             <button
               class="btn btn-dark btn-lg dropdown-toggle fw-bold text-white"
@@ -66,6 +66,11 @@
         </div>
         <div class="btn-group">
           <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
+            <a href="booking_branch.php" class="text-decoration-none text-white">Branch Information</a>
+          </button>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
             <a href="freight_bill.php" class="text-decoration-none text-white">Freight Bill</a>
           </button>
         </div>
@@ -91,12 +96,12 @@
               <li><a class="dropdown-item bg-dark text-white" href="consignee_record.php">Consignee Records</a></li>
               <li><a class="dropdown-item bg-dark text-white" href="lorry_record.php">Lorry Records</a></li>
               <li><a class="dropdown-item bg-dark text-white" href="invoice_record.php">Invoice Records</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="booking_branch_record.php">Booking Branch Records</a></li>
+
               
             </ul>
           </div>
         </li>
-
-
       </ul>
 
       <!-- Right side user section -->

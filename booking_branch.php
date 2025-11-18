@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Consignee</title>
+  <title>Booking Branch</title>
   <meta
     content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     name="viewport" />
@@ -85,29 +85,29 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <div class="card-title">CONSIGNEE INFORMATION</div>
+                  <div class="card-title">BRANCH INFORMATION</div>
                 </div>
                 <div class="card-body">
                   <form>
                     <div class="row mb-2">
                       <div class="col-md-6 ">
                         <div class="form-group">
-                          <label for="vehicle">CONSIGNEE NAME</label>
+                          <label for="vehicle">BRANCH NAME</label>
                           <input
                             type="text"
                             class="form-control"
                             id="vehicle"
-                            placeholder="Enter Name">
+                            placeholder="Enter Branch Name">
                         </div>
                       </div>
                       <div class="col-md-6 ">
                         <div class="form-group">
-                          <label for="vehicle">CONSIGNEE PHONE</label>
+                          <label for="vehicle">BRANCH CODE</label>
                           <input
                             type="text"
                             class="form-control"
                             id="vehicleowner"
-                            placeholder="Enter Phone Number">
+                            placeholder="Enter Branch Code">
                         </div>
                       </div>
                     </div>
@@ -115,7 +115,30 @@
                     <div class="row mb-2">
                       <div class="col-md-6 ">
                         <div class="form-group">
-                          <label for="vehicle">CONSIGNEE ADDRESS</label>
+                          <label for="vehicle">CITY</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="vehicle"
+                            placeholder="Enter City">
+                        </div>
+                      </div>
+                      <div class="col-md-6 ">
+                        <div class="form-group">
+                          <label for="vehicle">PINCODE</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="vehicleowner"
+                            placeholder="Enter Pincode">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mb-2">
+                      <div class="col-md-6 ">
+                        <div class="form-group">
+                          <label for="vehicle">ADDRESS</label>
                           <input
                             type="text"
                             class="form-control"
@@ -125,29 +148,13 @@
                       </div>
                       <div class="col-md-6 ">
                         <div class="form-group">
-                          <label for="vehicle">GSTIN</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="vehicleowner"
-                            placeholder="Enter GSTIN">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-2">
-                      <div class="col-md-6 ">
-                        <div class="form-group">
-                          <label for="vehicle">INVOICE NUMBER</label>
+                          <label for="vehicle">PHONE NUMBER</label>
                           <input
                             type="text"
                             class="form-control"
                             id="vehicle"
-                            placeholder="Enter Invoice number">
+                            placeholder="Enter Phone Number">
                         </div>
-                      </div>
-                      <div class="col-md-6 ">
-                        
                       </div>
                     </div>
 

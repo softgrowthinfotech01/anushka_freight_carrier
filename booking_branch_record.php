@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Consignor Records</title>
+  <title>Branch Records</title>
   <meta
     content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     name="viewport" />
@@ -104,7 +104,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">Lorry Records</h4>
+                  <h4 class="card-title">Booking Branch Records</h4>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -114,54 +114,36 @@
                       <thead>
                         <tr>
                           <th>Sr. No.</th>
-                          <th>Vehicle Number</th>
-                          <th>Vehicle Name</th>
-                          <th>RC Number</th>
-                          <th>Owner Name</th>
-                          <th>Owner Phone</th>
-                          <th>Owner Address</th>
-                          <th>Owner ID</th>
-                          <th>Driver Name</th>
-                          <th>Driver Phone</th>
-                          <th>Driver Address</th>
-                          <th>Driver ID</th>
-                          <th>Remarks</th>
+                          <th>Branch Name</th>
+                          <th>Branch Code</th>
+                          <th>City</th>
+                          <th>Pincode</th>
+                          <th>Address</th>
+                          <th>Phone</th>
                           <th class="sticky-column">Action</th>
                         </tr>
                       </thead>
                       <tfoot>
                         <tr>
                           <th>Sr. No.</th>
-                          <th>Vehicle Number</th>
-                          <th>Vehicle Name</th>
-                          <th>RC Number</th>
-                          <th>Owner Name</th>
-                          <th>Owner Phone</th>
-                          <th>Owner Address</th>
-                          <th>Owner ID</th>
-                          <th>Driver Name</th>
-                          <th>Driver Phone</th>
-                          <th>Driver Address</th>
-                          <th>Driver ID</th>
-                          <th>Remarks</th>
+                          <th>Branch Name</th>
+                          <th>Branch Code</th>
+                          <th>City</th>
+                          <th>Pincode</th>
+                          <th>Address</th>
+                          <th>Phone</th>
                           <th class="sticky-column">Action</th>
                         </tr>
                       </tfoot>
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>MH34EA2222 </td>
-                          <td>Tata Ace</td>
-                          <td>KA01GK2485</td>
-                          <td>Arjun Sharma</td>
-                          <td>7896321455</td>
                           <td>Chandrapur</td>
-                          <td>...</td>
-                          <td>Vikram Patel</td>
-                          <td>7539514682</td>
+                          <td>1234</td>
                           <td>Chandrapur</td>
-                          <td>DL</td>
-                          <td>...</td>
+                          <td>442402</td>
+                          <td>Chandrapur</td>
+                          <td>1236547890</td>
                           <td class="sticky-column bg-light">
                             <div class="btn-group-vertical d-flex gap-1" role="group" aria-label="Vertical radio toggle button group">
                               <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio11" autocomplete="off">
@@ -173,19 +155,13 @@
                         </tr>
 
                         <tr>
-                          <td>1</td>
-                          <td>MH34EA2222 </td>
-                          <td>Tata Intra</td>
-                          <td>KA01GK4528</td>
-                          <td>Viraj Sharma</td>
-                          <td>7896321455</td>
+                          <td>2</td>
                           <td>Chandrapur</td>
-                          <td>...</td>
-                          <td>Sahil Patel</td>
-                          <td>7539514682</td>
-                          <td>Warora</td>
-                          <td>DL</td>
-                          <td>...</td>
+                          <td>1234</td>
+                          <td>Chandrapur</td>
+                          <td>442402</td>
+                          <td>Chandrapur</td>
+                          <td>1236547890</td>
                           <td class="sticky-column bg-light">
                             <div class="btn-group-vertical d-flex gap-1" role="group" aria-label="Vertical radio toggle button group">
                               <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio11" autocomplete="off">
@@ -197,19 +173,13 @@
                         </tr>
 
                         <tr>
-                          <td>1</td>
-                          <td>MH34EA2222 </td>
-                          <td>Tata Intra</td>
-                          <td>KA01GK7412</td>
-                          <td>Arjun Patel</td>
-                          <td>7896321455</td>
-                          <td>Rajura</td>
-                          <td>...</td>
-                          <td>Vikram Sharma</td>
-                          <td>7539514682</td>
+                          <td>3</td>
                           <td>Chandrapur</td>
-                          <td>DL</td>
-                          <td>...</td>
+                          <td>1234</td>
+                          <td>Chandrapur</td>
+                          <td>442402</td>
+                          <td>Chandrapur</td>
+                          <td>1236547890</td>
                           <td class="sticky-column bg-light">
                             <div class="btn-group-vertical d-flex gap-1" role="group" aria-label="Vertical radio toggle button group">
                               <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio11" autocomplete="off">
