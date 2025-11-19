@@ -336,15 +336,15 @@
                                     <div class="col-md-8 d-flex flex-column row-gap-1">
                                       <div class="col">
                                         <select class="form-select field-dropdown" id="billingPartySelector">
-    <option value="">-- Select --</option>
-    <option value="TBB">TBB</option>
-    <option value="PAID">PAID</option>
-    <option value="TO_PAY">To PAY</option>
-</select>
- <!-- Dropdown -->
+                                          <option value="">-- Select --</option>
+                                          <option value="TBB">TBB</option>
+                                          <option value="PAID">PAID</option>
+                                          <option value="TO_PAY">To PAY</option>
+                                        </select>
+                                        <!-- Dropdown -->
                                       </div>
 
-                                      
+
 
 
                                       <div class="col">
@@ -411,7 +411,7 @@
     background:#f9f9f9;
     border-radius:6px;
 ">
-</div>
+                          </div>
                           </fieldset>
                         </div> <!-- end table-like -->
 
@@ -690,99 +690,99 @@
 
                     </div><br>-->
 
-                    
+
                     <!-- Invoice Details -->
-<div class="table-like" id="invoice-container">
+                    <div class="table-like" id="invoice-container">
 
-  <div class="invoice-row">
+                      <div class="invoice-row">
 
-    <div class="row p-2">
-      <div class="col section-title">Invoice Details</div>
-    </div>
+                        <div class="row p-2">
+                          <div class="col section-title">Invoice Details</div>
+                        </div>
 
-    <div class="row" style="margin-bottom:6px;">
-      <div class="col">
-        <label>Invoice No.</label>
-        <div class="field">
-          <input type="text" class="border-0 invoice-no" style="width: 100%;" placeholder="auto generated" readonly>
-        </div>
-      </div>
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>Invoice No.</label>
+                            <div class="field">
+                              <input type="text" class="border-0 invoice-no" style="width: 100%;" placeholder="auto generated" readonly>
+                            </div>
+                          </div>
 
-      <div class="col">
-        <label>Invoice Date</label>
-        <div class="field">
-          <input type="date" class="border-0 invoice-date" style="width: 100%;">
-        </div>
-      </div>
+                          <div class="col">
+                            <label>Invoice Date</label>
+                            <div class="field">
+                              <input type="date" class="border-0 invoice-date" style="width: 100%;">
+                            </div>
+                          </div>
 
-      <div class="col">
-        <label>Invoice Amount</label>
-        <div class="field">
-          <input type="text" class="border-0 invoice-amount" style="width: 100%;">
-        </div>
-      </div>
-    </div>
+                          <div class="col">
+                            <label>Invoice Amount</label>
+                            <div class="field">
+                              <input type="text" class="border-0 invoice-amount" style="width: 100%;">
+                            </div>
+                          </div>
+                        </div>
 
-    <div class="row" style="margin-bottom:6px;">
-      <div class="col">
-        <label>E-Way Bill</label>
-        <div class="field">
-          <input type="text" class="border-0 eway-bill" style="width: 100%;">
-        </div>
-      </div>
+                        <div class="row" style="margin-bottom:6px;">
+                          <div class="col">
+                            <label>E-Way Bill</label>
+                            <div class="field">
+                              <input type="text" class="border-0 eway-bill" style="width: 100%;">
+                            </div>
+                          </div>
 
-      <div class="col">
-        <label>E-Way From Date</label>
-        <div class="field">
-          <input type="date" class="border-0 eway-from" style="width: 100%;">
-        </div>
-      </div>
+                          <div class="col">
+                            <label>E-Way From Date</label>
+                            <div class="field">
+                              <input type="date" class="border-0 eway-from" style="width: 100%;">
+                            </div>
+                          </div>
 
-      <div class="col">
-        <label>E-Way To Date</label>
-        <div class="field">
-          <input type="date" class="border-0 eway-to" style="width: 100%;">
-        </div>
-      </div>
-      
-    </div>
-    <div class="d-flex justify-content-center align-items-center addInvoiceTableRowBtn">
-    <button id="addInvoiceBtn" class="button1">Add More Invoice</button>
-  </div>
-    
+                          <div class="col">
+                            <label>E-Way To Date</label>
+                            <div class="field">
+                              <input type="date" class="border-0 eway-to" style="width: 100%;">
+                            </div>
+                          </div>
 
-    <!-- TABLE FOR INVOICE FIELDS -->
-    <div class="row mt-3">
-      <div class="col-12">
-        <table class="table" style="width: 100%; table-layout: fixed; border:1px solid #eee;">
-          <thead style="background:#fbf3f3; color:#9d3630; font-weight:600;">
-            <tr>
-              <th>SR NO.</th>
-              <th>Invoice No.</th>
-              <th>Invoice Date</th>
-              <th>Invoice Amount</th>
-              <th>E-Way Bill</th>
-              <th>E-Way From Date</th>
-              <th>E-Way To Date</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody class="invoiceTableBody">
-            <!-- Dynamic Rows -->
-          </tbody>
-        </table>
-        
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center addInvoiceTableRowBtn">
+                          <button id="addInvoiceBtn" class="button1">Add More Invoice</button>
+                        </div>
 
-      </div>
-    </div>
 
-    <hr>
-  </div>
-  
+                        <!-- TABLE FOR INVOICE FIELDS -->
+                        <div class="row mt-3">
+                          <div class="col-12">
+                            <table class="table" style="width: 100%; table-layout: fixed; border:1px solid #eee;">
+                              <thead style="background:#fbf3f3; color:#9d3630; font-weight:600;">
+                                <tr>
+                                  <th>SR NO.</th>
+                                  <th>Invoice No.</th>
+                                  <th>Invoice Date</th>
+                                  <th>Invoice Amount</th>
+                                  <th>E-Way Bill</th>
+                                  <th>E-Way From Date</th>
+                                  <th>E-Way To Date</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody class="invoiceTableBody">
+                                <!-- Dynamic Rows -->
+                              </tbody>
+                            </table>
 
-  
 
-</div>
+                          </div>
+                        </div>
+
+                        <hr>
+                      </div>
+
+
+
+
+                    </div>
 
 
                     <br>
@@ -903,17 +903,17 @@
       lineColor: "#ffa534",
       fillColor: "rgba(255, 165, 52, .14)",
     });
-</script>
-<script>
-  let sr = 1;
+  </script>
+  <script>
+    let sr = 1;
 
-  // Load saved data on page load
-  window.onload = function() {
-  let savedData = JSON.parse(localStorage.getItem("tableData")) || [];
-  let table = document.getElementById("packageTableBody");
+    // Load saved data on page load
+    window.onload = function() {
+      let savedData = JSON.parse(localStorage.getItem("tableData")) || [];
+      let table = document.getElementById("packageTableBody");
 
-  savedData.forEach((row, index) => {
-  table.insertAdjacentHTML("beforeend", `
+      savedData.forEach((row, index) => {
+        table.insertAdjacentHTML("beforeend", `
   <tr>
     <td>${index + 1}</td>
     <td>${row.method} (${row.pack})</td>
@@ -921,26 +921,26 @@
     <td><button type="button" onclick="removeRow(this)">Delete</button></td>
   </tr>
   `);
-  });
+      });
 
-  sr = savedData.length + 1;
-  };
+      sr = savedData.length + 1;
+    };
 
-  document.getElementById("addMoreBtn").addEventListener("click", function(e) {
-  e.preventDefault(); // stop refresh
+    document.getElementById("addMoreBtn").addEventListener("click", function(e) {
+      e.preventDefault(); // stop refresh
 
-  let method = document.getElementById("method").value;
-  let pack = document.getElementById("package").value;
-  let qty = document.getElementById("quality").value;
+      let method = document.getElementById("method").value;
+      let pack = document.getElementById("package").value;
+      let qty = document.getElementById("quality").value;
 
-  if (method === "" || qty === "") {
-  alert("Please fill all fields!");
-  return;
-  }
+      if (method === "" || qty === "") {
+        alert("Please fill all fields!");
+        return;
+      }
 
-  // Add row to table
-  let table = document.getElementById("packageTableBody");
-  table.insertAdjacentHTML("beforeend", `
+      // Add row to table
+      let table = document.getElementById("packageTableBody");
+      table.insertAdjacentHTML("beforeend", `
   <tr>
     <td>${sr}</td>
     <td>${method} (${pack})</td>
@@ -949,98 +949,98 @@
   </tr>
   `);
 
-  // Save to localStorage
-  saveToLocalStorage();
+      // Save to localStorage
+      saveToLocalStorage();
 
-  sr++;
+      sr++;
 
-  // Clear inputs
-  document.getElementById("method").value = "";
-  document.getElementById("package").value = "";
-  document.getElementById("quality").value = "";
-  });
+      // Clear inputs
+      document.getElementById("method").value = "";
+      document.getElementById("package").value = "";
+      document.getElementById("quality").value = "";
+    });
 
-  // Delete row
-  function removeRow(btn) {
-  btn.parentNode.parentNode.remove();
-  saveToLocalStorage();
-  }
+    // Delete row
+    function removeRow(btn) {
+      btn.parentNode.parentNode.remove();
+      saveToLocalStorage();
+    }
 
-  // Save current table to localStorage
-  function saveToLocalStorage() {
-  let rows = document.querySelectorAll("#packageTableBody tr");
-  let data = [];
+    // Save current table to localStorage
+    function saveToLocalStorage() {
+      let rows = document.querySelectorAll("#packageTableBody tr");
+      let data = [];
 
-  rows.forEach(row => {
-  let cols = row.querySelectorAll("td");
-  data.push({
-  method: cols[1].innerText.split(" (")[0],
-  pack: cols[1].innerText.split(" (")[1].replace(")", ""),
-  qty: cols[2].innerText
-  });
-  });
+      rows.forEach(row => {
+        let cols = row.querySelectorAll("td");
+        data.push({
+          method: cols[1].innerText.split(" (")[0],
+          pack: cols[1].innerText.split(" (")[1].replace(")", ""),
+          qty: cols[2].innerText
+        });
+      });
 
-  localStorage.setItem("tableData", JSON.stringify(data));
-  }
+      localStorage.setItem("tableData", JSON.stringify(data));
+    }
 
-  document.getElementById("orderForm").addEventListener("submit", function() {
-  localStorage.removeItem("tableData");
-  });
+    document.getElementById("orderForm").addEventListener("submit", function() {
+      localStorage.removeItem("tableData");
+    });
   </script>
 
   <!-- Code for Invoice details table -->
-<script>
-// Add More Invoice Section
-document.getElementById("addInvoiceBtn").addEventListener("click", function (e) {
-    e.preventDefault();
+  <script>
+    // Add More Invoice Section
+    document.getElementById("addInvoiceBtn").addEventListener("click", function(e) {
+      e.preventDefault();
 
-    let container = document.getElementById("invoice-container");
-    let firstRow = container.querySelector(".invoice-row");
-    let clone = firstRow.cloneNode(true);
+      let container = document.getElementById("invoice-container");
+      let firstRow = container.querySelector(".invoice-row");
+      let clone = firstRow.cloneNode(true);
 
-    // Clear invoice inputs
-    clone.querySelectorAll("input").forEach(inp => {
+      // Clear invoice inputs
+      clone.querySelectorAll("input").forEach(inp => {
         if (inp.classList.contains("invoice-no")) {
-            inp.value = "auto generated"; // always fixed
+          inp.value = "auto generated"; // always fixed
         } else {
-            inp.value = "";
+          inp.value = "";
         }
+      });
+
+      // Clear table rows
+      clone.querySelector(".invoiceTableBody").innerHTML = "";
+
+      container.insertBefore(clone, this.parentElement);
+
+      // Attach table events to this new row
+      attachAddTableRowEvent(clone);
     });
 
-    // Clear table rows
-    clone.querySelector(".invoiceTableBody").innerHTML = "";
 
-    container.insertBefore(clone, this.parentElement);
+    // Attach add-row functionality for each invoice block
+    function attachAddTableRowEvent(invoiceBlock) {
 
-    // Attach table events to this new row
-    attachAddTableRowEvent(clone);
-});
+      let btn = invoiceBlock.querySelector(".addInvoiceTableRowBtn");
+      let tbody = invoiceBlock.querySelector(".invoiceTableBody");
 
+      let sr = 1;
 
-// Attach add-row functionality for each invoice block
-function attachAddTableRowEvent(invoiceBlock) {
-
-    let btn   = invoiceBlock.querySelector(".addInvoiceTableRowBtn");
-    let tbody = invoiceBlock.querySelector(".invoiceTableBody");
-
-    let sr = 1;
-
-    btn.onclick = function () {
+      btn.onclick = function() {
 
         // ALWAYS FIXED
         let invNo = "auto generated";
 
         // GET VALUES
         let invDate = invoiceBlock.querySelector(".invoice-date").value.trim();
-        let invAmt  = invoiceBlock.querySelector(".invoice-amount").value.trim();
-        let bill    = invoiceBlock.querySelector(".eway-bill").value.trim();
-        let from    = invoiceBlock.querySelector(".eway-from").value.trim();
-        let to      = invoiceBlock.querySelector(".eway-to").value.trim();
+        let invAmt = invoiceBlock.querySelector(".invoice-amount").value.trim();
+        let bill = invoiceBlock.querySelector(".eway-bill").value.trim();
+        let from = invoiceBlock.querySelector(".eway-from").value.trim();
+        let to = invoiceBlock.querySelector(".eway-to").value.trim();
 
         // VALIDATION
         if (invDate === "" || invAmt === "" || bill === "" || from === "" || to === "") {
-            alert("Please fill all invoice fields before adding to table!");
-            return;
+          alert("Please fill all invoice fields before adding to table!");
+          return;
         }
 
         // ADD ROW TO TABLE
@@ -1060,10 +1060,10 @@ function attachAddTableRowEvent(invoiceBlock) {
         sr++;
 
         // DELETE EVENT
-        row.querySelector(".delete-btn").onclick = function () {
-            row.remove();
-            updateSrNo(tbody);
-            sr = tbody.querySelectorAll("tr").length + 1;
+        row.querySelector(".delete-btn").onclick = function() {
+          row.remove();
+          updateSrNo(tbody);
+          sr = tbody.querySelectorAll("tr").length + 1;
         };
 
         // ✔ CLEAR INPUT FIELDS AFTER ADDING
@@ -1072,39 +1072,39 @@ function attachAddTableRowEvent(invoiceBlock) {
         invoiceBlock.querySelector(".eway-bill").value = "";
         invoiceBlock.querySelector(".eway-from").value = "";
         invoiceBlock.querySelector(".eway-to").value = "";
-    };
-}
+      };
+    }
 
 
-// Update SR NO after delete
-function updateSrNo(tbody) {
-    let rows = tbody.querySelectorAll("tr");
-    rows.forEach((r, i) => {
+    // Update SR NO after delete
+    function updateSrNo(tbody) {
+      let rows = tbody.querySelectorAll("tr");
+      rows.forEach((r, i) => {
         r.children[0].textContent = i + 1;
-    });
-}
+      });
+    }
 
 
-// Attach first invoice block
-attachAddTableRowEvent(document.querySelector(".invoice-row"));
-</script>
+    // Attach first invoice block
+    attachAddTableRowEvent(document.querySelector(".invoice-row"));
+  </script>
 
-<!-- Billing JS -->
-<script>
-document.getElementById("billingPartySelector").addEventListener("change", function() {
+  <!-- Billing JS -->
+  <script>
+    document.getElementById("billingPartySelector").addEventListener("change", function() {
 
-    let box = document.getElementById("billingInfoBox");
-    let value = this.value;
+      let box = document.getElementById("billingInfoBox");
+      let value = this.value;
 
-    if (value === "TBB" || value === "") {
+      if (value === "TBB" || value === "") {
         box.style.display = "none";
         box.innerHTML = "";
         return;
-    }
+      }
 
-    let html = "";
+      let html = "";
 
-    if (value === "PAID") {
+      if (value === "PAID") {
         html = `
         <h6><b>Billing Party: CONSIGNOR</b></h6>
 
@@ -1140,10 +1140,10 @@ document.getElementById("billingPartySelector").addEventListener("change", funct
 
         </div>
         `;
-    }
+      }
 
 
-    if (value === "TO_PAY") {
+      if (value === "TO_PAY") {
         html = `
         <h6><b>Billing Party: CONSIGNEE</b></h6>
 
@@ -1179,13 +1179,13 @@ document.getElementById("billingPartySelector").addEventListener("change", funct
 
         </div>
         `;
-    }
+      }
 
-    box.innerHTML = html;
-    box.style.display = "block";
+      box.innerHTML = html;
+      box.style.display = "block";
 
-});
-</script>
+    });
+  </script>
 
 
 
