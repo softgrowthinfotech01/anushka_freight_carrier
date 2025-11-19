@@ -46,6 +46,8 @@
                 <hr class="dropdown-divider">
               </li>
               <li><a class="dropdown-item bg-dark text-white" href="dashboard.php">CN Entry</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="lorry.php">Lorry Information</a></li>
+              <li><a class="dropdown-item bg-dark text-white" href="booking_branch.php">Branch Information</a></li>  
             </ul>
           </div>
         </li>
@@ -59,7 +61,7 @@
             <a href="consignee.php" class="text-decoration-none text-white">Consignee Information</a>
           </button>
         </div>
-        <div class="btn-group">
+        <!-- <div class="btn-group">
           <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
             <a href="lorry.php" class="text-decoration-none text-white">Lorry Information</a>
           </button>
@@ -68,13 +70,18 @@
           <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
             <a href="booking_branch.php" class="text-decoration-none text-white">Branch Information</a>
           </button>
-        </div>
+        </div> -->
         <div class="btn-group">
           <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
             <a href="freight_bill.php" class="text-decoration-none text-white">Freight Bill</a>
           </button>
+          <div class="btn-group">
+          <button class="btn btn-dark btn-lg " type="button" aria-expanded="false">
+            <a href="form.php" class="text-decoration-none text-white">Consignment Note</a>
+          </button>
         </div>
         </li>
+
 
         <li class="nav-item dropdown gap-3">
           <div class="btn-group">
@@ -95,7 +102,7 @@
               <li><a class="dropdown-item bg-dark text-white" href="consignor_record.php">Consignor Records</a></li>
               <li><a class="dropdown-item bg-dark text-white" href="consignee_record.php">Consignee Records</a></li>
               <li><a class="dropdown-item bg-dark text-white" href="lorry_record.php">Lorry Records</a></li>
-              <li><a class="dropdown-item bg-dark text-white" href="invoice_record.php">Invoice Records</a></li>
+              <!-- <li><a class="dropdown-item bg-dark text-white" href="invoice_record.php">Invoice Records</a></li> -->
               <li><a class="dropdown-item bg-dark text-white" href="booking_branch_record.php">Booking Branch Records</a></li>
 
               

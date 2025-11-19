@@ -1096,7 +1096,6 @@ document.getElementById("billingPartySelector").addEventListener("change", funct
     let box = document.getElementById("billingInfoBox");
     let value = this.value;
 
-    // Hide for TBB
     if (value === "TBB" || value === "") {
         box.style.display = "none";
         box.innerHTML = "";
@@ -1106,83 +1105,88 @@ document.getElementById("billingPartySelector").addEventListener("change", funct
     let html = "";
 
     if (value === "PAID") {
-    html = `
-        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+        html = `
+        <h6><b>Billing Party: CONSIGNOR</b></h6>
 
-            <div style="flex:1; min-width:45%;">
-                <b>Name:</b> ${document.getElementById("consignorName").value}
+        <div style="display:flex; flex-direction:column; border:1px solid #070606ff; border-radius:5px;">
+
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Name</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consignorName").value}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Phone</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consignorPhone").value}</div>
             </div>
 
-            <div style="flex:1; min-width:45%;">
-                <b>Phone:</b> ${document.getElementById("consignorPhone").value}
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Address</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consignorAddress").value}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Email</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consignorEmail").value}</div>
             </div>
 
-            <div style="flex:1; min-width:45%;">
-                <b>Address:</b> ${document.getElementById("consignorAddress").value}
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Legal Name</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consignorLegal").value}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Trade Name</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consignorTrade").value}</div>
             </div>
 
-            <div style="flex:1; min-width:45%;">
-                <b>Email:</b> ${document.getElementById("consignorEmail").value}
-            </div>
-
-            <div style="flex:1; min-width:45%;">
-                <b>Legal Name:</b> ${document.getElementById("consignorLegal").value}
-            </div>
-
-            <div style="flex:1; min-width:45%;">
-                <b>Trade Name:</b> ${document.getElementById("consignorTrade").value}
-            </div>
-
-            <div style="flex:1; min-width:45%;">
-                <b>GSTIN:</b> ${document.getElementById("consignorGstin").value}
+            <div style="display:flex;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">GSTIN</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consignorGstin").value}</div>
+                <div style="flex:1; padding:6px; background:#f9f9f9;"></div>
+                <div style="flex:1; padding:6px;"></div>
             </div>
 
         </div>
-    `;
-}
+        `;
+    }
 
 
     if (value === "TO_PAY") {
-    html = `
-        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+        html = `
+        <h6><b>Billing Party: CONSIGNEE</b></h6>
 
-            <div style="flex:1; min-width:45%;">
-                <b>Name:</b> ${document.getElementById("consigneeName").value}
+        <div style="display:flex; flex-direction:column; border:1px solid #040303ff; border-radius:5px;">
+
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Name</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consigneeName").value}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Phone</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consigneePhone").value}</div>
             </div>
 
-            <div style="flex:1; min-width:45%;">
-                <b>Phone:</b> ${document.getElementById("consigneePhone").value}
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Address</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consigneeAddress").value}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Email</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consigneeEmail").value}</div>
             </div>
 
-            <div style="flex:1; min-width:45%;">
-                <b>Address:</b> ${document.getElementById("consigneeAddress").value}
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Legal Name</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consigneeLegal").value}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">Trade Name</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consigneeTrade").value}</div>
             </div>
 
-            <div style="flex:1; min-width:45%;">
-                <b>Email:</b> ${document.getElementById("consigneeEmail").value}
-            </div>
-
-            <div style="flex:1; min-width:45%;">
-                <b>Legal Name:</b> ${document.getElementById("consigneeLegal").value}
-            </div>
-
-            <div style="flex:1; min-width:45%;">
-                <b>Trade Name:</b> ${document.getElementById("consigneeTrade").value}
-            </div>
-
-            <div style="flex:1; min-width:45%;">
-                <b>GSTIN:</b> ${document.getElementById("consigneeGstin").value}
+            <div style="display:flex;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f9f9f9;">GSTIN</div>
+                <div style="flex:1; padding:6px;">${document.getElementById("consigneeGstin").value}</div>
+                <div style="flex:1; padding:6px; background:#f9f9f9;"></div>
+                <div style="flex:1; padding:6px;"></div>
             </div>
 
         </div>
-    `;
-}
-
+        `;
+    }
 
     box.innerHTML = html;
     box.style.display = "block";
+
 });
 </script>
+
 
 
 

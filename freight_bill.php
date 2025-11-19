@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freight Bill</title>
+
+    <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/plugins.min.css" />
+  <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+    
     <style>
         body {
             background: #f2f2f2;
@@ -30,7 +36,7 @@
             transform: translate(-50%, -50%);
             font-size: 200px;
             font-weight: 700;
-            color: rgba(189, 142, 142, 0.06);
+            color: rgba(189, 142, 142, 0.05);
             user-select: none;
             pointer-events: none;
         }
@@ -78,14 +84,14 @@
         .table {
             border-collapse: collapse;
             width: 100%;
-            margin-top: 10px;
-            font-size: 13px;
+            margin-top: 5px;
+            font-size: 7px;
         }
 
         .table th,
         .table td {
             border: 1px solid #aaa;
-            padding: 4px;
+            padding: 2px;
             text-align: center;
         }
 
@@ -149,6 +155,12 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+.table-wrapper {
+    width: 117.5%;
+    transform: scale(0.85);   /* 85% size, change as you like */
+    transform-origin: top left;
+}
+
     </style>
 </head>
 
@@ -156,38 +168,51 @@
     <div class="sheet">
         <div class="watermark">AFC</div>
 
-        <header>
+        <header class="d-flex justify-content-center">
+            <div class="logo" aria-hidden="true">
+          <!-- simple emblem placeholder -->
+          <img src="logo-AC.png" alt="logo" class="img-fluid" width="110px">
+        </div>
+        <div>
             <h1>ANUSHKA FREIGHT CARRIERS</h1>
             <p>Regd. Office: MAHAVEER POTTERIES COMPOUND, NAGPUR ROAD, PO. PADOLI, CHANDRAPUR</p>
+            </div>
 
         </header>
 
         <div class="main-grid">
             <div>
                 <div class="label">Party Name & Address:</div>
-                <div class="field-box">[Enter Party Details Here]</div>
+                <div class="field-box"><input type="text" class="border-0" style="width: 100%;"
+                                            placeholder=""></div>
 
                 <div class="label" style="margin-top:6px;">GSTIN:</div>
-                <div class="field-box">—</div>
+                <div class="field-box"><input type="text" class="border-0" style="width: 100%;"
+                                            placeholder=""></div>
 
                 <div class="label" style="margin-top:6px;">NOTE:</div>
-                <div class="field-box">WE OWN MORE THAN 10 VEHICLES AND OUR PAN NO: ALGPV0809D</div>
+                <div class="field-box"><input type="text" class="border-0" style="width: 100%;"
+                                            placeholder=""></div>
             </div>
 
             <div>
                 <div class="label">Billing Name & Address:</div>
-                <div class="field-box">CHANDRAPUR, MAHAVEER POTTERIES COMPOUND, NAGPUR ROAD, PADOLI</div>
+                <div class="field-box"><input type="text" class="border-0" style="width: 100%;"
+                                            placeholder=""></div>
 
                 <div class="label" style="margin-top:6px;">Bill No.</div>
-                <div class="field-box"><b></b></div>
+                <div class="field-box"><input type="text" class="border-0" style="width: 100%;"
+                                            placeholder=""></div>
 
                 <div class="label" style="margin-top:6px;">Bill Date / Payment Due Date:</div>
-                <div class="field-box">—</div>
+                <div class="field-box"><input type="text" class="border-0" style="width: 100%;"
+                                            placeholder=""></div>
 
-                <div class="label" style="margin-top:6px;">Basis of Charges:</div>
-                <div class="field-box">As per G.C. Note or Contract No.: 0</div>
+                
             </div>
         </div>
+
+        <div class="table-wrapper">
 
         <table class="table">
   <tr>
@@ -208,14 +233,16 @@
   <!-- Sample Row -->
   <tr>
     <td>1</td>
-    <td></td>
-          <td style="border-right:1px solid #aaa;"></td>
-          <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td><input type="text" style="border: none;" ></td>
+          <td style="border-right:1px solid #aaa;">
+            <input type="text" style="width: 50px; border:none">
+        </td>
+          <td><input type="text" style="width: 50px; border:none"></td>
+    <td><input type="text" style="width: 50px; border:none"></td>
+    <td><input type="text" style="width: 90px; border:none"></td>
+    <td><input type="text" style="width: 90px; border:none"></td>
+    <td><input type="text" style="width: 50px; border:none"></td>
+    <td><input type="text" style="width: 90px; border:none"></td>
   </tr>
 
   <!-- Empty Space Row -->
@@ -226,12 +253,16 @@
   <!-- Grand Total Row -->
   <tr>
     <td colspan="8" class="footer-row">GRAND TOTAL</td>
-    <td>₹ _______</td>
+    <td><div class="field-box"><input type="text" class="border-0" style="width: 100%;"
+                                            placeholder="Rs."></div></td>
   </tr>
 </table>
 
+</div>
+
         <div class="rupees">
-            <b>Rupees in words:</b> ____________________________________________
+            <b>Rupees in words:</b> <div class="field-box"><input type="text" class="border-0" style="width: 100%;"
+                                            placeholder="Rs."></div>
         </div>
 
         <div class="terms">
@@ -266,7 +297,7 @@
         </div><br>
 
         <div style="display:flex; justify-content:center; align-items:center">
-    <button class="button" value="print">Print</button>
+    <button class="button" value="">Print</button>
     </div>
 
     </div>
