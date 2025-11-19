@@ -746,9 +746,9 @@
       </div>
       
     </div>
-    <div class="d-flex justify-content-center align-items-center addInvoiceTableRowBtn">
-    <button id="addInvoiceBtn" class="button1">Add More Invoice</button>
-  </div>
+    <div class="d-flex justify-content-center align-items-center ">
+      <button id="addInvoiceBtn" class="button1 addInvoiceTableRowBtn">Add More Invoice</button>
+    </div>
     
 
     <!-- TABLE FOR INVOICE FIELDS -->
