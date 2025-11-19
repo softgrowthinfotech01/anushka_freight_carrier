@@ -109,21 +109,20 @@
                             <div class="row m-0">
                               <div class="col">
                                 <label>Booking Branch</label>
-
                               </div>
-                              <div class="col">
+                              <div class="col-3">
                                 <select class="form-select field-dropdown" id="consignorDropdown">
                                   <option value="">-- Select --</option>
+                                  <option value="chandrapur">Chandrapur</option>
+
                                 </select> <!-- dropdown -->
                               </div>
-                              <div class="col">
-                                <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                    placeholder="Pincode"></div>
-                                <!-- Autofill pincode and city -->
+                              <div class="col-3">
+                                <label>Loading Location</label>
                               </div>
-                              <div class="col">
+                              <div class="col-3">
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                    placeholder="City"></div>
+                                    placeholder="Location"></div>
                                 <!-- Autofill pincode and city -->
                               </div>
                             </div>
@@ -137,6 +136,7 @@
                                 <div class=" w-25">
                                   <select class="form-select field-dropdown" id="consignorDropdown">
                                     <option value="">-- Select --</option> <!-- Alphabet Letter -->
+                                    <option value="">A</option> <!-- Alphabet Letter -->
                                   </select> <!-- dropdown -->
                                 </div>
                                 <div class=" w-75">
@@ -152,6 +152,8 @@
                               <div class="col">
                                 <select class="form-select field-dropdown" id="consignorDropdown">
                                   <option value="">-- Select Delivery Type --</option>
+                                  <option value="">Godown Delivery</option>
+                                  <option value="">Door Delivery</option>
                                 </select> <!-- dropdown -->
                               </div>
                             </div>
@@ -165,9 +167,7 @@
                                 <!-- Autofill dest. drop location and pincode -->
                               </div>
                               <div class="col">
-                                <select class="form-select field-dropdown" id="consignorDropdown">
-                                  <option value="">-- Select --</option>
-                                </select> <!-- dropdown -->
+                                <label style="margin-top: 5px;">Drop Location</label>
                               </div>
                               <div class="col">
                                 <div class="field"><input type="text" class="border-0" style="width: 100%;"
@@ -175,17 +175,7 @@
                                 <!-- Autofill dest. drop location and pincode -->
                               </div>
                             </div>
-                            <div class="row m-0">
-                              <div class="col-md-3">
-                                <label>Exceptional Booking?</label>
-                              </div>
-                              <div class="col-md-3">
-                                <select class="form-select field-dropdown" id="consignorDropdown">
-                                  <option value="">-- Select --</option>
-                                </select> <!-- dropdown -->
-                              </div>
 
-                            </div>
                           </fieldset>
                         </div>
                         <!-- consignor / consignee -->
@@ -196,7 +186,7 @@
                               <legend class="w-auto float-none section-title">Consignor Details:</legend>
 
                               <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                   <div class="d-flex flex-column row-gap-2">
                                     <label>Select Consignor</label>
                                     <label>Consignor's Name</label>
@@ -205,10 +195,10 @@
                                     <label>Consignor's Email</label>
                                     <label>Legal Name</label>
                                     <label>Trade Name</label>
-                                    <label>From CODE &amp; Name</label>
+                                    <label>GSTIN</label>
                                   </div>
                                 </div>
-                                <div class="col-md-8 d-flex flex-column row-gap-1">
+                                <div class="col-md-7 d-flex flex-column row-gap-1">
                                   <div class="col">
                                     <select class="form-select field-dropdown" id="consignorDropdown">
                                       <option value="">-- Select Consignor --</option>
@@ -222,36 +212,37 @@
                                   <div class="col">
 
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Name"></div>
+                                        placeholder="Name" id="consignorName"></div>
                                   </div>
                                   <div class="col">
 
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Address"></div>
+                                        placeholder="Address" id="consignorAddress"></div>
                                   </div>
                                   <div class="col">
 
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Phone"></div>
+                                        placeholder="Phone" id="consignorPhone"></div>
                                   </div>
                                   <div class="col">
 
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Email"></div>
+                                        placeholder="Email" id="consignorEmail"></div>
                                   </div>
                                   <div class="col">
 
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Legal"></div>
+                                        placeholder="Legal" id="consignorLegal"></div>
                                   </div>
                                   <div class="col">
 
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Trade"></div>
+                                        placeholder="Trade" id="consignorTrade"></div>
                                   </div>
                                   <div class="col">
 
-                                    <div class="field">[Code / Location]</div>
+                                    <div class="field"><input type="text" class="border-0" style="width: 100%;"
+                                        placeholder="GSTIN" id="consignorGstin"></div>
                                   </div>
                                 </div>
 
@@ -265,7 +256,7 @@
                               <legend class="w-auto float-none section-title">Consignee Details:</legend>
 
                               <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                   <div class="d-flex flex-column row-gap-2">
                                     <label>Select Consignee</label>
                                     <label>Consignee's Name</label>
@@ -274,12 +265,12 @@
                                     <label>Consignee's Email</label>
                                     <label>Legal Name</label>
                                     <label>Trade Name</label>
-                                    <label>TO CODE &amp; Name</label>
+                                    <label>GSTIN</label>
                                   </div>
                                 </div>
-                                <div class="col-md-8 d-flex flex-column row-gap-1">
+                                <div class="col-md-7 d-flex flex-column row-gap-1">
                                   <div class="col">
-                                    <select class="form-select field-dropdown" id="consignorDropdown">
+                                    <select class="form-select field-dropdown" id="consigneeDropdown">
                                       <option value="">-- Select Consignee --</option>
                                       <option value="1">Arjun Sharma Transport</option>
                                       <option value="2">Patel Logistics Pvt Ltd</option>
@@ -290,30 +281,32 @@
                                   </div>
                                   <div class="col">
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Name"></div>
+                                        placeholder="Name" id="consigneeName"></div>
                                   </div>
                                   <div class="col">
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Address"></div>
+                                        placeholder="Address" id="consigneeAddress"></div>
                                   </div>
                                   <div class="col">
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Phone"></div>
+                                        placeholder="Phone" id="consigneePhone"></div>
                                   </div>
                                   <div class="col">
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Email"></div>
+                                        placeholder="Email" id="consigneeEmail"></div>
                                   </div>
                                   <div class="col">
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Legal"></div>
+                                        placeholder="Legal" id="consigneeLegal"></div>
                                   </div>
                                   <div class="col">
                                     <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                        placeholder="Trade"></div>
+                                        placeholder="Trade" id="consigneeTrade"></div>
                                   </div>
                                   <div class="col">
-                                    <div class="field">[Code / Location]</div>
+
+                                    <div class="field"><input type="text" class="border-0" style="width: 100%;"
+                                        placeholder="GSTIN" id="consigneeGstin"></div>
                                   </div>
                                 </div>
                               </div>
@@ -338,42 +331,34 @@
                                       <label>Booking Basis</label>
                                       <label>Billing Party</label>
                                       <label>Billing Party GST</label>
-                                      <label>Address</label>
-                                      <label>Sector & DCC Days</label>
+                                      <label>Trade Name</label>
                                     </div>
                                     <div class="col-md-8 d-flex flex-column row-gap-1">
                                       <div class="col">
-                                        <select class="form-select field-dropdown" id="consignorDropdown">
-                                          <option value="">-- Select --</option>
-                                          <option value="">TBB</option>
-                                          <option value="">PAID</option>
-                                          <option value="">To PAY</option>
-                                        </select> <!-- Dropdown -->
+                                        <select class="form-select field-dropdown" id="billingPartySelector">
+    <option value="">-- Select --</option>
+    <option value="TBB">TBB</option>
+    <option value="PAID">PAID</option>
+    <option value="TO_PAY">To PAY</option>
+</select>
+ <!-- Dropdown -->
                                       </div>
+
+                                      
+
+
                                       <div class="col">
                                         <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                            placeholder=""></div>
+                                            placeholder="" id="billingParty"></div>
                                       </div>
 
                                       <div class="col">
                                         <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                            placeholder=""></div>
+                                            placeholder="" id="partyGst"></div>
                                       </div>
                                       <div class="col">
                                         <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                            placeholder=""></div>
-                                      </div>
-                                      <div class="col">
-                                        <div class="col d-flex gap-2">
-                                          <div class="col">
-                                            <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                                placeholder=""></div>
-                                          </div>
-                                          <div class="col">
-                                            <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                                placeholder=""></div>
-                                          </div>
-                                        </div>
+                                            placeholder="" id="tradeName"></div>
                                       </div>
                                     </div>
                                   </div>
@@ -384,8 +369,7 @@
                                       <label>Bill for & station</label>
                                       <label>Party Code and Unit</label>
                                       <label>Legal Name</label>
-                                      <label>Trade Name</label>
-                                      <label>CNCC Type</label>
+
                                     </div>
                                     <div class="col-md-8 d-flex flex-column row-gap-1">
                                       <div class="col d-flex gap-2">
@@ -396,38 +380,38 @@
                                         </div>
                                         <div class="col">
                                           <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                              placeholder=""></div>
+                                              placeholder="" id="billingStation"></div>
                                         </div>
                                       </div>
                                       <div class="col d-flex gap-2">
                                         <div class="col">
                                           <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                              placeholder=""></div>
+                                              placeholder="" id="partyCode"></div>
                                         </div>
                                         <div class="col">
                                           <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                              placeholder=""></div>
+                                              placeholder="" id="partyUnit"></div>
                                         </div>
 
                                       </div>
                                       <div class="col">
                                         <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                            placeholder=""></div>
-                                      </div>
-                                      <div class="col">
-                                        <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                                            placeholder=""></div>
-                                      </div>
-                                      <div class="col">
-                                        <select class="form-select field-dropdown" id="consignorDropdown">
-                                          <option value="">-- Select --</option>
-                                        </select> <!-- Dropdown -->
+                                            placeholder="" id="legalName"></div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                           </div>
+                          <div id="billingInfoBox" style="
+    display:none;
+    border:1px solid #ccc;
+    padding:10px;
+    margin-top:10px;
+    background:#f9f9f9;
+    border-radius:6px;
+">
+</div>
                           </fieldset>
                         </div> <!-- end table-like -->
 
@@ -466,8 +450,9 @@
                                 <div class="row">
                                   <div class="col-md-6 d-flex flex-column row-gap-2">
                                     <label>Package : </label>
-                                    <label>Qty.</label>
-
+                                    <label>Qty. :</label>
+                                    <label>Actual Weigt :</label>
+                                    <label>Charged Weight :</label>
                                   </div>
                                   <div class="col-md-6 d-flex flex-column row-gap-1">
                                     <div class="field">
@@ -475,6 +460,12 @@
                                     </div>
                                     <div class="field">
                                       <input type="text" id="quality" class="border-0 w-100" placeholder="">
+                                    </div>
+                                    <div class="field">
+                                      <input type="text" id="package" class="border-0 w-100" placeholder="">
+                                    </div>
+                                    <div class="field">
+                                      <input type="text" id="package" class="border-0 w-100" placeholder="">
                                     </div>
                                   </div>
                                 </div>
@@ -649,7 +640,7 @@
                     </div>
                     <!-- end content for side by side entries -->
 
-                    <!-- Invoice Details -->
+                    <!-- Invoice Details
 
                     <div class="table-like">
                       <div class="row p-2">
@@ -659,7 +650,7 @@
                       </div>
                       <div class="row" style="margin-bottom:6px;">
                         <div class="col">
-                          <label>Invoice No.</label> <!-- Auto Generated -->
+                          <label>Invoice No.</label>  
                           <div class="field"><input type="text" class="border-0" style="width: 100%;"
                               placeholder="auto generated"></div>
                         </div>
@@ -673,31 +664,22 @@
                           <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="">
                           </div>
                         </div>
-                        <div class="col">
-                          <label>Indent No.</label>
-                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="">
-                          </div>
-                        </div>
+                        
                       </div>
 
                       <div class="row" style="margin-bottom:6px;">
                         <div class="col">
-                          <label>Indent Date</label>
-                          <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder="">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <label>Way Bill</label>
+                          <label>E-Way Bill</label>
                           <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="">
                           </div>
                         </div>
                         <div class="col">
-                          <label>Way From Date</label>
+                          <label>E-Way From Date</label>
                           <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder="">
                           </div>
                         </div>
                         <div class="col">
-                          <label>Way To Date</label>
+                          <label>E-Way To Date</label>
                           <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder="">
                           </div>
                         </div>
@@ -706,7 +688,105 @@
                         <button class="button1" value="submit">Add More Invoice</button>
                       </div>
 
-                    </div><br>
+                    </div><br>-->
+
+                    
+                    <!-- Invoice Details -->
+<div class="table-like" id="invoice-container">
+
+  <div class="invoice-row">
+
+    <div class="row p-2">
+      <div class="col section-title">Invoice Details</div>
+    </div>
+
+    <div class="row" style="margin-bottom:6px;">
+      <div class="col">
+        <label>Invoice No.</label>
+        <div class="field">
+          <input type="text" class="border-0 invoice-no" style="width: 100%;" placeholder="auto generated" readonly>
+        </div>
+      </div>
+
+      <div class="col">
+        <label>Invoice Date</label>
+        <div class="field">
+          <input type="date" class="border-0 invoice-date" style="width: 100%;">
+        </div>
+      </div>
+
+      <div class="col">
+        <label>Invoice Amount</label>
+        <div class="field">
+          <input type="text" class="border-0 invoice-amount" style="width: 100%;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-bottom:6px;">
+      <div class="col">
+        <label>E-Way Bill</label>
+        <div class="field">
+          <input type="text" class="border-0 eway-bill" style="width: 100%;">
+        </div>
+      </div>
+
+      <div class="col">
+        <label>E-Way From Date</label>
+        <div class="field">
+          <input type="date" class="border-0 eway-from" style="width: 100%;">
+        </div>
+      </div>
+
+      <div class="col">
+        <label>E-Way To Date</label>
+        <div class="field">
+          <input type="date" class="border-0 eway-to" style="width: 100%;">
+        </div>
+      </div>
+      
+    </div>
+    <div class="d-flex justify-content-center align-items-center addInvoiceTableRowBtn">
+    <button id="addInvoiceBtn" class="button1">Add More Invoice</button>
+  </div>
+    
+
+    <!-- TABLE FOR INVOICE FIELDS -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <table class="table" style="width: 100%; table-layout: fixed; border:1px solid #eee;">
+          <thead style="background:#fbf3f3; color:#9d3630; font-weight:600;">
+            <tr>
+              <th>SR NO.</th>
+              <th>Invoice No.</th>
+              <th>Invoice Date</th>
+              <th>Invoice Amount</th>
+              <th>E-Way Bill</th>
+              <th>E-Way From Date</th>
+              <th>E-Way To Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody class="invoiceTableBody">
+            <!-- Dynamic Rows -->
+          </tbody>
+        </table>
+        
+
+      </div>
+    </div>
+
+    <hr>
+  </div>
+  
+
+  
+
+</div>
+
+
+                    <br>
+
                     <div class="table-like">
                       <div class="row p-2">
                         <div class="col section-title">
@@ -728,6 +808,7 @@
                       </div>
 
                     </div>
+
 
 
                     <div class="footer1">
@@ -822,91 +903,288 @@
       lineColor: "#ffa534",
       fillColor: "rgba(255, 165, 52, .14)",
     });
+</script>
+<script>
+  let sr = 1;
+
+  // Load saved data on page load
+  window.onload = function() {
+  let savedData = JSON.parse(localStorage.getItem("tableData")) || [];
+  let table = document.getElementById("packageTableBody");
+
+  savedData.forEach((row, index) => {
+  table.insertAdjacentHTML("beforeend", `
+  <tr>
+    <td>${index + 1}</td>
+    <td>${row.method} (${row.pack})</td>
+    <td>${row.qty}</td>
+    <td><button type="button" onclick="removeRow(this)">Delete</button></td>
+  </tr>
+  `);
+  });
+
+  sr = savedData.length + 1;
+  };
+
+  document.getElementById("addMoreBtn").addEventListener("click", function(e) {
+  e.preventDefault(); // stop refresh
+
+  let method = document.getElementById("method").value;
+  let pack = document.getElementById("package").value;
+  let qty = document.getElementById("quality").value;
+
+  if (method === "" || qty === "") {
+  alert("Please fill all fields!");
+  return;
+  }
+
+  // Add row to table
+  let table = document.getElementById("packageTableBody");
+  table.insertAdjacentHTML("beforeend", `
+  <tr>
+    <td>${sr}</td>
+    <td>${method} (${pack})</td>
+    <td>${qty}</td>
+    <td><button class="btn btn-outline-danger" type="button" onclick="removeRow(this)">Delete</button></td>
+  </tr>
+  `);
+
+  // Save to localStorage
+  saveToLocalStorage();
+
+  sr++;
+
+  // Clear inputs
+  document.getElementById("method").value = "";
+  document.getElementById("package").value = "";
+  document.getElementById("quality").value = "";
+  });
+
+  // Delete row
+  function removeRow(btn) {
+  btn.parentNode.parentNode.remove();
+  saveToLocalStorage();
+  }
+
+  // Save current table to localStorage
+  function saveToLocalStorage() {
+  let rows = document.querySelectorAll("#packageTableBody tr");
+  let data = [];
+
+  rows.forEach(row => {
+  let cols = row.querySelectorAll("td");
+  data.push({
+  method: cols[1].innerText.split(" (")[0],
+  pack: cols[1].innerText.split(" (")[1].replace(")", ""),
+  qty: cols[2].innerText
+  });
+  });
+
+  localStorage.setItem("tableData", JSON.stringify(data));
+  }
+
+  document.getElementById("orderForm").addEventListener("submit", function() {
+  localStorage.removeItem("tableData");
+  });
   </script>
 
-  <script>
+  <!-- Code for Invoice details table -->
+<script>
+// Add More Invoice Section
+document.getElementById("addInvoiceBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let container = document.getElementById("invoice-container");
+    let firstRow = container.querySelector(".invoice-row");
+    let clone = firstRow.cloneNode(true);
+
+    // Clear invoice inputs
+    clone.querySelectorAll("input").forEach(inp => {
+        if (inp.classList.contains("invoice-no")) {
+            inp.value = "auto generated"; // always fixed
+        } else {
+            inp.value = "";
+        }
+    });
+
+    // Clear table rows
+    clone.querySelector(".invoiceTableBody").innerHTML = "";
+
+    container.insertBefore(clone, this.parentElement);
+
+    // Attach table events to this new row
+    attachAddTableRowEvent(clone);
+});
+
+
+// Attach add-row functionality for each invoice block
+function attachAddTableRowEvent(invoiceBlock) {
+
+    let btn   = invoiceBlock.querySelector(".addInvoiceTableRowBtn");
+    let tbody = invoiceBlock.querySelector(".invoiceTableBody");
+
     let sr = 1;
 
-    // Load saved data on page load
-    window.onload = function() {
-      let savedData = JSON.parse(localStorage.getItem("tableData")) || [];
-      let table = document.getElementById("packageTableBody");
+    btn.onclick = function () {
 
-      savedData.forEach((row, index) => {
-        table.insertAdjacentHTML("beforeend", `
-            <tr>
-                <td>${index + 1}</td>
-                <td>${row.method} (${row.pack})</td>
-                <td>${row.qty}</td>
-                <td><button type="button" onclick="removeRow(this)">Delete</button></td>
-            </tr>
-        `);
-      });
+        // ALWAYS FIXED
+        let invNo = "auto generated";
 
-      sr = savedData.length + 1;
+        // GET VALUES
+        let invDate = invoiceBlock.querySelector(".invoice-date").value.trim();
+        let invAmt  = invoiceBlock.querySelector(".invoice-amount").value.trim();
+        let bill    = invoiceBlock.querySelector(".eway-bill").value.trim();
+        let from    = invoiceBlock.querySelector(".eway-from").value.trim();
+        let to      = invoiceBlock.querySelector(".eway-to").value.trim();
+
+        // VALIDATION
+        if (invDate === "" || invAmt === "" || bill === "" || from === "" || to === "") {
+            alert("Please fill all invoice fields before adding to table!");
+            return;
+        }
+
+        // ADD ROW TO TABLE
+        let row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${sr}</td>
+          <td>${invNo}</td>
+          <td>${invDate}</td>
+          <td>${invAmt}</td>
+          <td>${bill}</td>
+          <td>${from}</td>
+          <td>${to}</td>
+          <td><button type="button "class="delete-btn btn btn-danger btn-sm">Delete</button></td>
+        `;
+
+        tbody.appendChild(row);
+        sr++;
+
+        // DELETE EVENT
+        row.querySelector(".delete-btn").onclick = function () {
+            row.remove();
+            updateSrNo(tbody);
+            sr = tbody.querySelectorAll("tr").length + 1;
+        };
+
+        // ✔ CLEAR INPUT FIELDS AFTER ADDING
+        invoiceBlock.querySelector(".invoice-date").value = "";
+        invoiceBlock.querySelector(".invoice-amount").value = "";
+        invoiceBlock.querySelector(".eway-bill").value = "";
+        invoiceBlock.querySelector(".eway-from").value = "";
+        invoiceBlock.querySelector(".eway-to").value = "";
     };
+}
 
-    document.getElementById("addMoreBtn").addEventListener("click", function(e) {
-      e.preventDefault(); // stop refresh
 
-      let method = document.getElementById("method").value;
-      let pack = document.getElementById("package").value;
-      let qty = document.getElementById("quality").value;
+// Update SR NO after delete
+function updateSrNo(tbody) {
+    let rows = tbody.querySelectorAll("tr");
+    rows.forEach((r, i) => {
+        r.children[0].textContent = i + 1;
+    });
+}
 
-      if (method === "" || qty === "") {
-        alert("Please fill all fields!");
+
+// Attach first invoice block
+attachAddTableRowEvent(document.querySelector(".invoice-row"));
+</script>
+
+<!-- Billing JS -->
+<script>
+document.getElementById("billingPartySelector").addEventListener("change", function() {
+
+    let box = document.getElementById("billingInfoBox");
+    let value = this.value;
+
+    // Hide for TBB
+    if (value === "TBB" || value === "") {
+        box.style.display = "none";
+        box.innerHTML = "";
         return;
-      }
-
-      // Add row to table
-      let table = document.getElementById("packageTableBody");
-      table.insertAdjacentHTML("beforeend", `
-        <tr>
-            <td>${sr}</td>
-            <td>${method} (${pack})</td>
-            <td>${qty}</td>
-            <td><button class="btn btn-outline-danger" type="button" onclick="removeRow(this)">Delete</button></td>
-        </tr>
-    `);
-
-      // Save to localStorage
-      saveToLocalStorage();
-
-      sr++;
-
-      // Clear inputs
-      document.getElementById("method").value = "";
-      document.getElementById("package").value = "";
-      document.getElementById("quality").value = "";
-    });
-
-    // Delete row
-    function removeRow(btn) {
-      btn.parentNode.parentNode.remove();
-      saveToLocalStorage();
     }
 
-    // Save current table to localStorage
-    function saveToLocalStorage() {
-      let rows = document.querySelectorAll("#packageTableBody tr");
-      let data = [];
+    let html = "";
 
-      rows.forEach(row => {
-        let cols = row.querySelectorAll("td");
-        data.push({
-          method: cols[1].innerText.split(" (")[0],
-          pack: cols[1].innerText.split(" (")[1].replace(")", ""),
-          qty: cols[2].innerText
-        });
-      });
+    if (value === "PAID") {
+    html = `
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
 
-      localStorage.setItem("tableData", JSON.stringify(data));
-    }
+            <div style="flex:1; min-width:45%;">
+                <b>Name:</b> ${document.getElementById("consignorName").value}
+            </div>
 
-    document.getElementById("orderForm").addEventListener("submit", function() {
-      localStorage.removeItem("tableData");
-    });
-  </script>
+            <div style="flex:1; min-width:45%;">
+                <b>Phone:</b> ${document.getElementById("consignorPhone").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Address:</b> ${document.getElementById("consignorAddress").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Email:</b> ${document.getElementById("consignorEmail").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Legal Name:</b> ${document.getElementById("consignorLegal").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Trade Name:</b> ${document.getElementById("consignorTrade").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>GSTIN:</b> ${document.getElementById("consignorGstin").value}
+            </div>
+
+        </div>
+    `;
+}
+
+
+    if (value === "TO_PAY") {
+    html = `
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+
+            <div style="flex:1; min-width:45%;">
+                <b>Name:</b> ${document.getElementById("consigneeName").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Phone:</b> ${document.getElementById("consigneePhone").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Address:</b> ${document.getElementById("consigneeAddress").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Email:</b> ${document.getElementById("consigneeEmail").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Legal Name:</b> ${document.getElementById("consigneeLegal").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>Trade Name:</b> ${document.getElementById("consigneeTrade").value}
+            </div>
+
+            <div style="flex:1; min-width:45%;">
+                <b>GSTIN:</b> ${document.getElementById("consigneeGstin").value}
+            </div>
+
+        </div>
+    `;
+}
+
+
+    box.innerHTML = html;
+    box.style.display = "block";
+});
+</script>
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
