@@ -738,18 +738,18 @@
                             </div>
                           </div>
 
-                          <div class="col">
-                            <label>E-Way To Date</label>
-                            <div class="field">
-                              <input type="date" class="border-0 eway-to" style="width: 100%;">
-                            </div>
-                          </div>
-
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center addInvoiceTableRowBtn">
-                          <button id="addInvoiceBtn" class="button1">Add More Invoice</button>
-                        </div>
-
+      <div class="col">
+        <label>E-Way To Date</label>
+        <div class="field">
+          <input type="date" class="border-0 eway-to" style="width: 100%;">
+        </div>
+      </div>
+      
+    </div>
+    <div class="d-flex justify-content-center align-items-center addInvoiceTableRowBtn">
+    <button id="addInvoiceBtn" class="button1">Add More Invoice</button>
+  </div>
+    
 
                         <!-- TABLE FOR INVOICE FIELDS -->
                         <div class="row mt-3">
