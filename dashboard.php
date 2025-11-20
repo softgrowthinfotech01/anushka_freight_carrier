@@ -455,13 +455,11 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-md-6 d-flex" style="flex: 1 1 48%;">
+                              <div class="col-md-6 d-flex gap-2" style="flex: 1 1 48%;">
                                 <div class="row">
                                   <div class="col-md-6 d-flex flex-column row-gap-2">
                                     <label>Package : </label>
                                     <label>Qty. :</label>
-                                    <label>Actual Weigt :</label>
-                                    <label>Charged Weight :</label>
                                   </div>
                                   <div class="col-md-6 d-flex flex-column row-gap-1">
                                     <div class="field">
@@ -470,6 +468,14 @@
                                     <div class="field">
                                       <input type="text" id="quality" class="border-0 w-100" placeholder="">
                                     </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6 d-flex flex-column row-gap-2">
+                                    <label>Actual Weigt :</label>
+                                    <label>Charged Weight :</label>
+                                  </div>
+                                  <div class="col-md-6 d-flex flex-column row-gap-1">
                                     <div class="field">
                                       <input type="text" id="actualWeight" class="border-0 w-100" placeholder="">
                                     </div>
@@ -526,7 +532,7 @@
                           </div>
 
                           <div class="d-flex justify-content-center align-items-center gap-3">
-                            <input type="checkbox"><label for="" class="m-0 fs-5"> FREIGHT PENDING</label>
+                             <input type="checkbox"><label for="" class="m-0 fs-5"> FREIGHT PENDING</label> <!-- This should hide all fields in right section -->
                           </div><br>
                           <div class="list" aria-hidden="false" style="margin-top:10px;">
                             <!-- list of charge rows -->
@@ -652,57 +658,6 @@
                     </div>
                     <!-- end content for side by side entries -->
 
-                    <!-- Invoice Details
-
-                    <div class="table-like">
-                      <div class="row p-2">
-                        <div class="col section-title">
-                          Invoice Details
-                        </div>
-                      </div>
-                      <div class="row" style="margin-bottom:6px;">
-                        <div class="col">
-                          <label>Invoice No.</label>  
-                          <div class="field"><input type="text" class="border-0" style="width: 100%;"
-                              placeholder="auto generated"></div>
-                        </div>
-                        <div class="col">
-                          <label>Invoice Date</label>
-                          <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder="">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <label>Invoice Amount</label>
-                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="">
-                          </div>
-                        </div>
-                        
-                      </div>
-
-                      <div class="row" style="margin-bottom:6px;">
-                        <div class="col">
-                          <label>E-Way Bill</label>
-                          <div class="field"><input type="text" class="border-0" style="width: 100%;" placeholder="">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <label>E-Way From Date</label>
-                          <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder="">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <label>E-Way To Date</label>
-                          <div class="field"><input type="date" class="border-0" style="width: 100%;" placeholder="">
-                          </div>
-                        </div>
-                      </div>
-                      <div class=" d-flex justify-content-center align-items-center">
-                        <button class="button1" value="submit">Add More Invoice</button>
-                      </div>
-
-                    </div><br>-->
-
-
                     <!-- Invoice Details -->
                     <div class="table-like" id="invoice-container">
 
@@ -758,9 +713,10 @@
       </div>
       
     </div>
-    <div class="d-flex justify-content-center align-items-center addInvoiceTableRowBtn">
-    <button id="addInvoiceBtn" class="button1">Add More Invoice</button>
-  </div>
+    <div class="d-flex justify-content-center align-items-center addInvoiceWrapper">
+  <button type="button" id="addInvoiceBtn" class="button1">Add More Invoice</button>
+</div>
+
     
 
                         <!-- TABLE FOR INVOICE FIELDS -->
@@ -1047,13 +1003,12 @@ document.getElementById("chargedWeight").value = "";
 
     // Attach add-row functionality for each invoice block
     function attachAddTableRowEvent(invoiceBlock) {
+    let btn = invoiceBlock.querySelector("#addInvoiceBtn");
+    let tbody = invoiceBlock.querySelector(".invoiceTableBody");
 
-      let btn = invoiceBlock.querySelector(".addInvoiceTableRowBtn");
-      let tbody = invoiceBlock.querySelector(".invoiceTableBody");
-
-      let sr = 1;
-
-      btn.onclick = function() {
+    btn.onclick = function(e) {
+        e.stopPropagation();
+        e.preventDefault();
 
         // ALWAYS FIXED
         let invNo = "auto generated";
