@@ -59,15 +59,18 @@
       margin-top: 10px;
       /* spacing below legend */
     }
-    
-  #packageTableBody tr {
-    height: 28px !important;      /* Reduce row height */
-  }
-  #packageTableBody td {
-    padding: 4px 6px !important;  /* Reduce padding */
-    font-size: 12px;              /* Optional: smaller text */
-  }
 
+    #packageTableBody tr {
+      height: 28px !important;
+      /* Reduce row height */
+    }
+
+    #packageTableBody td {
+      padding: 4px 6px !important;
+      /* Reduce padding */
+      font-size: 12px;
+      /* Optional: smaller text */
+    }
   </style>
 </head>
 
@@ -472,7 +475,7 @@
                                 </div>
                                 <div class="row">
                                   <div class="col-md-6 d-flex flex-column row-gap-2">
-                                    <label>Actual Weigt :</label>
+                                    <label>Actual Weight :</label>
                                     <label>Charged Weight :</label>
                                   </div>
                                   <div class="col-md-6 d-flex flex-column row-gap-1">
@@ -489,11 +492,9 @@
 
                             <!-- Row 2: Package Method + Qty + Add -->
                             <div class="row mb-2" style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px;">
-
                               <div>
                                 <button type="button" class="button1" id="addMoreBtn">Add More</button>
                               </div>
-
                             </div>
 
                             <!-- Table Section -->
@@ -501,16 +502,15 @@
                               <div class="col-12" style="width: 100%;">
                                 <table class="table" style="width: 100%; table-layout: fixed;">
                                   <thead>
-  <tr>
-    <th>SR No.</th>
-    <th>Package Method</th>
-    <th>Quantity</th>
-    <th>Actual Weight</th>
-    <th>Charged Weight</th>
-    <th>Action</th>
-  </tr>
-</thead>
-
+                                    <tr>
+                                      <th>SR No.</th>
+                                      <th>Package Method</th>
+                                      <th>Quantity</th>
+                                      <th>Actual Weight</th>
+                                      <th>Charged Weight</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
                                   <tbody id="packageTableBody">
                                     <!-- dynamic rows appear here -->
                                   </tbody>
@@ -532,7 +532,7 @@
                           </div>
 
                           <div class="d-flex justify-content-center align-items-center gap-3">
-                             <input type="checkbox"><label for="" class="m-0 fs-5"> FREIGHT PENDING</label> <!-- This should hide all fields in right section -->
+                            <input type="checkbox"><label for="" class="m-0 fs-5"> FREIGHT PENDING</label> <!-- This should hide all fields in right section -->
                           </div><br>
                           <div class="list" aria-hidden="false" style="margin-top:10px;">
                             <!-- list of charge rows -->
@@ -627,7 +627,6 @@
                                   placeholder=""></div>
                             </div>
                           </div>
-
                         </div>
 
                         <div>
@@ -643,7 +642,6 @@
                           </div>
 
                           <div style="margin-top:10px;font-size:12px;">
-
                             <div class="charge-row">
                               <div>Received by :</div>
                               <div class="field"><input type="text" class="border-0" style="width: 100%;"
@@ -705,19 +703,17 @@
                             </div>
                           </div>
 
-      <div class="col">
-        <label>E-Way To Date</label>
-        <div class="field">
-          <input type="date" class="border-0 eway-to" style="width: 100%;">
-        </div>
-      </div>
-      
-    </div>
-    <div class="d-flex justify-content-center align-items-center addInvoiceWrapper">
-  <button type="button" id="addInvoiceBtn" class="button1">Add More Invoice</button>
-</div>
+                          <div class="col">
+                            <label>E-Way To Date</label>
+                            <div class="field">
+                              <input type="date" class="border-0 eway-to" style="width: 100%;">
+                            </div>
+                          </div>
 
-    
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center addInvoiceWrapper">
+                          <button type="button" id="addInvoiceBtn" class="button1">Add More Invoice</button>
+                        </div>
 
                         <!-- TABLE FOR INVOICE FIELDS -->
                         <div class="row mt-3">
@@ -903,11 +899,10 @@
       let pack = document.getElementById("package").value;
       let qty = document.getElementById("quality").value;
       let actual = document.getElementById("actualWeight").value;
-let charged = document.getElementById("chargedWeight").value;
+      let charged = document.getElementById("chargedWeight").value;
 
 
-      if (method === "" || qty === "" || actual === "" || charged === "") 
- {
+      if (method === "" || qty === "" || actual === "" || charged === "") {
         alert("Please fill all fields!");
         return;
       }
@@ -937,7 +932,7 @@ let charged = document.getElementById("chargedWeight").value;
       document.getElementById("package").value = "";
       document.getElementById("quality").value = "";
       document.getElementById("actualWeight").value = "";
-document.getElementById("chargedWeight").value = "";
+      document.getElementById("chargedWeight").value = "";
 
     });
 
@@ -955,12 +950,12 @@ document.getElementById("chargedWeight").value = "";
       rows.forEach(row => {
         let cols = row.querySelectorAll("td");
         data.push({
-  method: cols[1].innerText.split(" (")[0],
-  pack: cols[1].innerText.split(" (")[1].replace(")", ""),
-  qty: cols[2].innerText,
-  actual: cols[3].innerText,
-  charged: cols[4].innerText
-});
+          method: cols[1].innerText.split(" (")[0],
+          pack: cols[1].innerText.split(" (")[1].replace(")", ""),
+          qty: cols[2].innerText,
+          actual: cols[3].innerText,
+          charged: cols[4].innerText
+        });
 
       });
 
@@ -971,6 +966,104 @@ document.getElementById("chargedWeight").value = "";
       localStorage.removeItem("tableData");
     });
   </script>
+
+  <script>
+document.getElementById("billingPartySelector").addEventListener("change", function () {
+
+    let value = this.value;
+    let box = document.getElementById("billingInfoBox");
+
+    // Billing input fields
+    let billingParty  = document.getElementById("billingParty");
+    let partyGst      = document.getElementById("partyGst");
+    let tradeName     = document.getElementById("tradeName");
+    let legalName     = document.getElementById("legalName");
+
+    // Reset fields
+    billingParty.value = "";
+    partyGst.value = "";
+    tradeName.value = "";
+    legalName.value = "";
+
+    if (value === "" || value === "TBB") {
+        box.style.display = "none";
+        box.innerHTML = "";
+        return;
+    }
+
+    // Data holder
+    let d = {};
+
+    if (value === "PAID") {
+        d = {
+            name:     document.getElementById("consignorName").value,
+            address:  document.getElementById("consignorAddress").value,
+            phone:    document.getElementById("consignorPhone").value,
+            email:    document.getElementById("consignorEmail").value,
+            legal:    document.getElementById("consignorLegal").value,
+            trade:    document.getElementById("consignorTrade").value,
+            gst:      document.getElementById("consignorGstin").value
+        };
+    }
+
+    if (value === "TO_PAY") {
+        d = {
+            name:     document.getElementById("consigneeName").value,
+            address:  document.getElementById("consigneeAddress").value,
+            phone:    document.getElementById("consigneePhone").value,
+            email:    document.getElementById("consigneeEmail").value,
+            legal:    document.getElementById("consigneeLegal").value,
+            trade:    document.getElementById("consigneeTrade").value,
+            gst:      document.getElementById("consigneeGstin").value
+        };
+    }
+
+    // ⭐ Autofill Billing Fields
+    billingParty.value = d.name;
+    partyGst.value     = d.gst;
+    tradeName.value    = d.trade;
+    legalName.value    = d.legal;
+
+    // ⭐ Show flexbox table
+    box.style.display = "block";
+    box.innerHTML = `
+        <h6><b>Billing Party: ${value === "PAID" ? "CONSIGNOR" : "CONSIGNEE"}</b></h6>
+
+        <div style="display:flex; flex-direction:column; border:1px solid #ccc; border-radius:5px;">
+
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f2f2f2;">Name</div>
+                <div style="flex:1; padding:6px;">${d.name}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f2f2f2;">Phone</div>
+                <div style="flex:1; padding:6px;">${d.phone}</div>
+            </div>
+
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f2f2f2;">Address</div>
+                <div style="flex:1; padding:6px;">${d.address}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f2f2f2;">Email</div>
+                <div style="flex:1; padding:6px;">${d.email}</div>
+            </div>
+
+            <div style="display:flex; border-bottom:1px solid #ccc;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f2f2f2;">Legal Name</div>
+                <div style="flex:1; padding:6px;">${d.legal}</div>
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f2f2f2;">Trade Name</div>
+                <div style="flex:1; padding:6px;">${d.trade}</div>
+            </div>
+
+            <div style="display:flex;">
+                <div style="flex:1; padding:6px; font-weight:bold; background:#f2f2f2;">GSTIN</div>
+                <div style="flex:1; padding:6px;">${d.gst}</div>
+                <div style="flex:1; padding:6px;"></div>
+                <div style="flex:1; padding:6px;"></div>
+            </div>
+
+        </div>
+    `;
+});
+</script>
+
 
   <!-- Code for Invoice details table -->
   <script>
@@ -1003,10 +1096,10 @@ document.getElementById("chargedWeight").value = "";
 
     // Attach add-row functionality for each invoice block
     function attachAddTableRowEvent(invoiceBlock) {
-    let btn = invoiceBlock.querySelector("#addInvoiceBtn");
-    let tbody = invoiceBlock.querySelector(".invoiceTableBody");
+      let btn = invoiceBlock.querySelector("#addInvoiceBtn");
+      let tbody = invoiceBlock.querySelector(".invoiceTableBody");
 
-    btn.onclick = function(e) {
+      btn.onclick = function(e) {
         e.stopPropagation();
         e.preventDefault();
 
