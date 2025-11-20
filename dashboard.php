@@ -59,6 +59,15 @@
       margin-top: 10px;
       /* spacing below legend */
     }
+    
+  #packageTableBody tr {
+    height: 28px !important;      /* Reduce row height */
+  }
+  #packageTableBody td {
+    padding: 4px 6px !important;  /* Reduce padding */
+    font-size: 12px;              /* Optional: smaller text */
+  }
+
   </style>
 </head>
 
@@ -462,10 +471,10 @@
                                       <input type="text" id="quality" class="border-0 w-100" placeholder="">
                                     </div>
                                     <div class="field">
-                                      <input type="text" id="package" class="border-0 w-100" placeholder="">
+                                      <input type="text" id="actualWeight" class="border-0 w-100" placeholder="">
                                     </div>
                                     <div class="field">
-                                      <input type="text" id="package" class="border-0 w-100" placeholder="">
+                                      <input type="text" id="chargedWeight" class="border-0 w-100" placeholder="">
                                     </div>
                                   </div>
                                 </div>
@@ -486,13 +495,16 @@
                               <div class="col-12" style="width: 100%;">
                                 <table class="table" style="width: 100%; table-layout: fixed;">
                                   <thead>
-                                    <tr>
-                                      <th>SR No.</th>
-                                      <th>Package Method</th>
-                                      <th>Quantity</th>
-                                      <th>Action</th>
-                                    </tr>
-                                  </thead>
+  <tr>
+    <th>SR No.</th>
+    <th>Package Method</th>
+    <th>Quantity</th>
+    <th>Actual Weight</th>
+    <th>Charged Weight</th>
+    <th>Action</th>
+  </tr>
+</thead>
+
                                   <tbody id="packageTableBody">
                                     <!-- dynamic rows appear here -->
                                   </tbody>
@@ -904,6 +916,8 @@
       fillColor: "rgba(255, 165, 52, .14)",
     });
   </script>
+
+
   <script>
     let sr = 1;
 
@@ -932,8 +946,12 @@
       let method = document.getElementById("method").value;
       let pack = document.getElementById("package").value;
       let qty = document.getElementById("quality").value;
+      let actual = document.getElementById("actualWeight").value;
+let charged = document.getElementById("chargedWeight").value;
 
-      if (method === "" || qty === "") {
+
+      if (method === "" || qty === "" || actual === "" || charged === "") 
+ {
         alert("Please fill all fields!");
         return;
       }
@@ -941,13 +959,17 @@
       // Add row to table
       let table = document.getElementById("packageTableBody");
       table.insertAdjacentHTML("beforeend", `
-  <tr>
-    <td>${sr}</td>
-    <td>${method} (${pack})</td>
-    <td>${qty}</td>
-    <td><button class="btn btn-outline-danger" type="button" onclick="removeRow(this)">Delete</button></td>
-  </tr>
-  `);
+<tr>
+  <td>${sr}</td>
+  <td>${method} (${pack})</td>
+  <td>${qty}</td>
+  <td>${actual}</td>
+  <td>${charged}</td>
+  <td><button class="btn btn-outline-danger" type="button" onclick="removeRow(this)">Delete</button></td>
+</tr>
+`);
+
+
 
       // Save to localStorage
       saveToLocalStorage();
@@ -958,6 +980,9 @@
       document.getElementById("method").value = "";
       document.getElementById("package").value = "";
       document.getElementById("quality").value = "";
+      document.getElementById("actualWeight").value = "";
+document.getElementById("chargedWeight").value = "";
+
     });
 
     // Delete row
@@ -974,10 +999,13 @@
       rows.forEach(row => {
         let cols = row.querySelectorAll("td");
         data.push({
-          method: cols[1].innerText.split(" (")[0],
-          pack: cols[1].innerText.split(" (")[1].replace(")", ""),
-          qty: cols[2].innerText
-        });
+  method: cols[1].innerText.split(" (")[0],
+  pack: cols[1].innerText.split(" (")[1].replace(")", ""),
+  qty: cols[2].innerText,
+  actual: cols[3].innerText,
+  charged: cols[4].innerText
+});
+
       });
 
       localStorage.setItem("tableData", JSON.stringify(data));
